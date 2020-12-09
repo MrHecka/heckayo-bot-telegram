@@ -8,11 +8,14 @@
   },
   "dependencies": {
     "delay": "^4.4.0",
+    "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "http": "0.0.1-security",
     "kitsu": "^9.1.17",
     "kitsu.js": "^2.0.0",
     "lodash": "^4.17.20",
     "needle": "^2.5.2",
+    "snekfetch": "^4.0.4",
     "telebot": "^1.4.1",
     "ytdl-core": "^4.1.4"
   },

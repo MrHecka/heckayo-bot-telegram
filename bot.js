@@ -28,6 +28,7 @@ bot.on(['/menu'], async (msg) => {
 require('./nulis.js')(bot)
 require('./anime.js')(bot)
 require('./ytdl.js')(bot)
+require('./online.js')
 
 // require disini!
 
