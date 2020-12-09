@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "env": {"TOKEN":"1432682318:AAGozh3s6KT1g2g0jmK11IU4Dp1HZl1mes0","PORT":"8080"},
+            "env": {"TOKEN":"1432682318:AAFtzU7mQiVaTdbbFHJw1sO4OlxnkkRpnUU","PORT":"8080"},
             "program": "${file}"
         }
     ]
