@@ -1,0 +1,22 @@
+{
+    "name": "heckayo-bot-telegram",
+    "version": "3.0.0",
+    "description": "BOT DISCORD HECKAYO.",
+    "main": "bot.js",
+    "scripts": {
+      "start": "node bot.js"
+    },
+    "dependencies": {
+      "telebot": "^1.4.1"
+    },
+    "engines": {
+      "node": "12.x"
+    },
+  
+    "license": "MIT",
+    "keywords": [
+      "node",
+      "glitch",
+      "express"
+    ]
+  }
