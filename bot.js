@@ -37,8 +37,11 @@ require('./online.js')
 
 // require disini!
 
+
+
 bot.start()
-bot.getUpate()
+
+
 
 
 

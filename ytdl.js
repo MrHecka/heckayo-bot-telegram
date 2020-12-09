@@ -47,5 +47,6 @@ bot.on(/^\/ytdl (.+)$/, async (msg, props) => {
 
 
 
-bot.getUpate()
+
+
 
