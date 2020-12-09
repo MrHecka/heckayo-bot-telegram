@@ -1,22 +1,28 @@
 {
-    "name": "heckayo-bot-telegram",
-    "version": "3.0.0",
-    "description": "BOT DISCORD HECKAYO.",
-    "main": "bot.js",
-    "scripts": {
-      "start": "node bot.js"
-    },
-    "dependencies": {
-      "telebot": "^1.4.1"
-    },
-    "engines": {
-      "node": "12.x"
-    },
-  
-    "license": "MIT",
-    "keywords": [
-      "node",
-      "glitch",
-      "express"
-    ]
-  }
+  "name": "heckayo-bot-telegram",
+  "version": "3.0.0",
+  "description": "BOT DISCORD HECKAYO.",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "delay": "^4.4.0",
+    "fs": "0.0.1-security",
+    "kitsu": "^9.1.17",
+    "kitsu.js": "^2.0.0",
+    "lodash": "^4.17.20",
+    "needle": "^2.5.2",
+    "telebot": "^1.4.1",
+    "ytdl-core": "^4.1.4"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
