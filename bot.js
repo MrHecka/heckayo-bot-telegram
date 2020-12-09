@@ -9,7 +9,6 @@ const bot = new TeleBot({
 })
 
 
-
 bot.on(['/start', '/halo'], async (msg) => {
     msg.reply.photo('https://avatars0.githubusercontent.com/u/71875420?s=400&u=5c417305130d96788de7e5add2627c32c236cfd9&v=4')
     await delay (100)
@@ -32,10 +31,9 @@ require('./online.js')
 
 // require disini!
 
-
-
-
 bot.start()
+
+
 
 
 
