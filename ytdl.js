@@ -15,7 +15,7 @@ bot.on(/^\/ytdl (.+)$/, async (msg, props) => {
     const video = ytdl(url, {
       quality: "lowestvideo",
     });
-    video.pipe(fs.createWriteStream(`${__dirname}/.ytdl/video.mp4`));
+    video.pipe(fs.createWriteStream(`${__dirname}/ytdl/video.mp4`));
     bot.sendMessage(
       msg.from.id,
       "Sabar lagi persiapan download ngab...",
@@ -26,7 +26,7 @@ bot.on(/^\/ytdl (.+)$/, async (msg, props) => {
     });
     video.on("end", function () {
       bot.sendMessage(msg.from.id, "LOADING...██████████████]99%\nSabar dikit lagi");
-      let vid = `${__dirname}/.ytdl/video.mp4`;
+      let vid = `${__dirname}/ytdl/video.mp4`;
       let stats = fs.statSync(vid);
       let fileSizeInBytes = stats.size;
       var fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024).toFixed(2);
