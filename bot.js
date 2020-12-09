@@ -5,7 +5,13 @@ const delay = require('delay')
 
 
 const bot = new TeleBot({
-    token: process.env.TOKEN
+    token: process.env.TOKEN,
+    polling: { 
+        interval: 1000,
+        timeout: 20000,
+        limit: 100,
+        retryTimeout: 5000
+    },
 })
 
 
