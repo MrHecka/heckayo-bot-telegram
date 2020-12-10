@@ -17,12 +17,11 @@ const bot = new TeleBot({
 
 module.exports = bot => {
     bot.on(/^\/nulis (.+)$/, async (msg, args) => {
-    const arg = await args.match[1]
+    let arg = args.match[1].replace(/;/g, '%0a')
     if(arg.length < 10) {
         return bot.sendMessage(msg.chat.id, 'Masukkan teks minimal 10 huruf!')
     }
 
-    if (arg.indexOf('#') > -1) { arg.replace(/\#/g, '')}
     let url = 'http://salism3.pythonanywhere.com/write?text='
     needle(url + arg, async (err, resp, body) => {
         if (_.isEmpty(body) === true) {

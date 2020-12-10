@@ -1,4 +1,4 @@
-console.log('ytdl.js aktif!')
+console.log('ytmp4.js aktif!')
 
 const TeleBot = require('telebot')
 const delay = require('delay')
@@ -10,23 +10,24 @@ const bot = new TeleBot({
 
 module.exports = bot => {
 
-bot.on(/^\/ytdl (.+)$/, async (msg, props) => {
+bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
     const url = props.match[1];
     const video = ytdl(url, {
       quality: "lowestvideo",
     });
-    video.pipe(fs.createWriteStream(`${__dirname}/video.mp4`));
-    bot.sendMessage(
+    let nama = Math.floor(Math.random() * Math.floor(1000))
+    await video.pipe(fs.createWriteStream(`${__dirname}/${nama}.mp4`));
+    await bot.sendMessage(
       msg.from.id,
       "Sabar lagi persiapan download ngab...",
       { replyToMessage: msg.message_id }
     );
-    video.on("info", function (info) {
+    await video.on("info", async function (info) {
       bot.sendMessage(msg.chat.id, `Masih loading download...`);
     });
-    video.on("end", function () {
+    await video.on("end", async function () {
       bot.sendMessage(msg.from.id, "LOADING...██████████████]99%\nSabar dikit lagi");
-      let vid = `${__dirname}/video.mp4`;
+      let vid = `${__dirname}/${nama}.mp4`;
       let stats = fs.statSync(vid);
       let fileSizeInBytes = stats.size;
       var fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024).toFixed(2);
