@@ -25,7 +25,7 @@ bot.on(['/start', '/halo'], async (msg) => {
 })
 
 bot.on(['/menu'], async (msg) => {
-    return bot.sendMessage(msg.from.id, `_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\n\n=====[DAFTAR MENU]=====\n>/nulis [teks]\n>/anime [nama anime]\n>/ytdl [link yt]\n>/commingsoongan\n\n=====[CATATAN]=====\n>Tolong bot nya jangan di spam :(\n>Cintai bot nya seperti kamu mencintai dia :/\n>Bot masih dalam tahap pengembangan!\n>Terima kasih sudah menggunakan bot Heckayo😍\n\n-Beritahu pembuat bot jika saya mati:\nhttps://t.me/MrHecka\n\n-Support bot ini dengan cara donasi ke:\nhttps://saweria.co/heckayo\n\n-BOT Dibuat Oleh :\n@MrHecka\n\n_______________`)
+    return bot.sendMessage(msg.from.id, `_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\n\n=====[DAFTAR MENU]=====\n> /nulis [teks]\n> /anime [nama anime]\n> /ytdl [link yt]\n> /commingsoongan\n\n=====[CATATAN]=====\n>Tolong bot nya jangan di spam :(\n>Cintai bot nya seperti kamu mencintai dia🤗\n>Bot masih dalam tahap pengembangan!\n>Terima kasih sudah menggunakan bot Heckayo😍\n\n-Beritahu pembuat bot jika saya mati:\nhttps://t.me/MrHecka\n\n-Support bot ini dengan cara donasi ke:\nhttps://saweria.co/heckayo\n\n-BOT Dibuat Oleh :\n@MrHecka\n\n_______________`)
 })
 
 // require disini!

@@ -22,7 +22,7 @@ module.exports = bot => {
         return bot.sendMessage(msg.chat.id, 'Masukkan teks minimal 10 huruf!')
     }
 
-    if (arg.indexOf('#') > -1) { args.replace(/\#/g, '')}
+    if (arg.indexOf('#') > -1) { arg.replace(/\#/g, '')}
     let url = 'http://salism3.pythonanywhere.com/write?text='
     needle(url + arg, async (err, resp, body) => {
         if (_.isEmpty(body) === true) {
