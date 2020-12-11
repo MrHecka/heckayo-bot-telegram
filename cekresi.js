@@ -59,7 +59,7 @@ ${manifestText.join('\n')}`
 
                 
 
-bot.sendMessage(msg.from.id, resultText)
+return bot.sendMessage(msg.from.id, resultText)
     
         })
 

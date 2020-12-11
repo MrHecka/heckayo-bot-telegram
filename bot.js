@@ -25,7 +25,13 @@ bot.on(['/start', '/halo'], async (msg) => {
 })
 
 bot.on(['/menu'], async (msg) => {
-    return bot.sendMessage(msg.from.id, `_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\n\n=====[DAFTAR MENU]=====\n> /nulis [baris1;baris2;baris3]\n> /anime [nama anime]\n> /ytmp4 [link yt]\n> /ytmp3 <link yt>\n> /cekresi <kurir> <resi>\n\n=====[CATATAN]=====\n>Tolong bot nya jangan di spam :(\n>Cintai bot nya seperti kamu mencintai dia🤗\n>Bot masih dalam tahap pengembangan!\n>Terima kasih sudah menggunakan bot Heckayo😍\n\n-Beritahu pembuat bot jika saya mati:\nhttps://t.me/MrHecka\n\n-Support bot ini dengan cara donasi ke:\nhttps://saweria.co/heckayo\n\n-BOT Dibuat Oleh :\n@MrHecka\n\n_______________`)
+    return bot.sendMessage
+(msg.from.id, `_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\n\n
+=====[DAFTAR MENU]=====\n> /nulis [baris1;baris2;baris3]\n> /anime [nama anime]\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n========================\n\n
+=====[CATATAN]=====\n>Tolong bot nya jangan di spam😣\n>Cintai bot nya seperti kamu mencintai dia🤗\n>Bot masih dalam tahap pengembangan🔧\n>Terima kasih sudah menggunakan Bot Heckayo😍\n===================\n\n
+-Beritahu pembuat bot jika saya mati atau jika kamu menemukan bug:\nhttps://t.me/MrHecka\n\n
+-Support bot ini dengan cara donasi ke:\nhttps://saweria.co/heckayo\n\n
+-BOT Dibuat Oleh :\n@MrHecka\n\n_______________`)
 })
 
 // require disini!
@@ -36,6 +42,8 @@ require('./ytmp4.js')(bot)
 require('./ytmp3.js')(bot)
 require('./online.js')
 require('./cekresi.js')(bot)
+require('./brainly.js')(bot)
+require('./lirik.js')(bot)
 
 // require disini!
 
