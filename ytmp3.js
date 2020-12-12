@@ -23,7 +23,7 @@ bot.on(/^\/ytmp3 (.+)$/, async (msg, props) => {
       { replyToMessage: msg.message_id }
     );
     await video.on("info", function (info) {
-        bot.sendMessage(msg.chat.id, `Masih loading download...`);
+      bot.sendMessage(msg.from.id, 'Sabar ngab...lagi download...')
     });
     await video.on("end", function () {
       bot.sendMessage(msg.from.id, "LOADING...██████████████]99%\nSabar dikit lagi");
@@ -34,7 +34,7 @@ bot.on(/^\/ytmp3 (.+)$/, async (msg, props) => {
       if (Number(fileSizeInMegabytes) >= 50) {
         bot.sendMessage(
           msg.chat.id,
-          `File video terlalu besar....gagal mengirim😢`
+          `File video terlalu besar untuk di convert ke mp3....gagal mengirim😢`
         );
       } else {
         bot
