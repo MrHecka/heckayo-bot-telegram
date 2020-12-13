@@ -27,7 +27,7 @@ bot.on(['/start', '/halo'], async (msg) => {
 bot.on(['/menu'], async (msg) => {
     return bot.sendMessage
 (msg.from.id, `_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\n\n
-=====[DAFTAR MENU]=====\n> /nulis [baris1;baris2;baris3]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /loli\n> /wallpaper\n> /pasangan [namamu] [nama pasanganmu]\n========================\n\n
+=====[DAFTAR MENU]=====\n> /nulis [baris1;baris2;baris3]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /pasangan [namamu] [nama pasanganmu]\n> /loli\n> /wallpaper\n========================\n\n
 =====[CATATAN]=====\n> Tolong bot nya jangan di spam😣\n> Cintai bot nya seperti kamu mencintai dia🤗\n> Semua perintah yang membutuhkan teks tidak perlu menggunakan tanda []👈\n> Masih bingung dengan fitur heckayo🤨? gunakan perintah /infomenu\n> Bot masih dalam tahap pengembangan🔧\n> Terima kasih sudah menggunakan Bot Heckayo😍\n===================\n\n
 > Beritahu pembuat bot jika saya mati atau jika kamu menemukan bug :\n> https://t.me/MrHecka\n\n
 > Support bot ini dengan cara donasi ke :\n> https://saweria.co/heckayo\n> https://paypal.me/mrplo/\n\n
