@@ -69,7 +69,6 @@ require('./loli.js')(bot)
 require('./anime.js')(bot)
 require('./ytmp4.js')(bot)
 require('./ytmp3.js')(bot)
-require('./online.js')
 require('./cekresi.js')(bot)
 require('./brainly.js')(bot)
 require('./lirik.js')(bot)
@@ -83,9 +82,8 @@ require('./fbdl.js')(bot)
 
 
 
+
 bot.start()
-
-
 
 
 

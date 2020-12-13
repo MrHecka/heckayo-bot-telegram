@@ -19,7 +19,8 @@ bot.on(/^\/fbdl (.+)$/, async (msg, args) => {
     TinyURL.shorten(`${video}`, function(res) {
       
         bot.sendMessage(msg.from.id, `✅BERHASIL!✅\n\nJudul : ${response.title}\n\nDeskripsi : ${response.description}\n\nDurasi : ${response.duration} Menit:Detik\n\nGenre : ${response.genre}\n\nDiupload pada tanggal : ${response.publishedAt}\n\nKonten Dewasa ? : ${response.nsfw ? 'Iya' : 'Tidak'}\n\nKualitas : ${response.quality}\n\nBesar Video KB/MB : ${response.size}\n\nTotal komentar : ${response.comments}\n\nDishare sebanyak : ${response.shares} kali\n\nLink Download : ${res}`)
-
+        console.log(response)
+        
                 })
 
             }).catch((err) => {

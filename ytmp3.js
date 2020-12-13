@@ -16,7 +16,7 @@ bot.on(/^\/ytmp3 (.+)$/, async (msg, props) => {
       quality: "lowestaudio"
     });
     let nama = Math.floor(Math.random() * Math.floor(1000))
-    await video.pipe(fs.createWriteStream(`${__dirname}/${nama}.mp3`));
+    await video.pipe(fs.createWriteStream(`${__dirname}/ytmp3${nama}.mp3`));
     await bot.sendMessage(
       msg.from.id,
       "Sabar lagi persiapan download ngab...",
@@ -27,7 +27,7 @@ bot.on(/^\/ytmp3 (.+)$/, async (msg, props) => {
     });
     await video.on("end", function () {
       bot.sendMessage(msg.from.id, "LOADING...██████████████]99%\nSabar dikit lagi");
-      let vid = `${__dirname}/${nama}.mp3`;
+      let vid = `${__dirname}/ytmp3${nama}.mp3`;
       let stats = fs.statSync(vid);
       let fileSizeInBytes = stats.size;
       var fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024).toFixed(2);
