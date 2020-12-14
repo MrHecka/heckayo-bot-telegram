@@ -27,7 +27,7 @@ bot.on(['/start', '/halo'], async (msg) => {
 bot.on(['/menu'], async (msg) => {
     return bot.sendMessage
 (msg.from.id, `_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\n\n
-=====[DAFTAR MENU]=====\n> /nulis [baris1;baris2;baris3]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /pasangan [namamu] [nama pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]\n> /rangkum [teks]\n> /loli\n> /wallpaper\n========================\n\n
+=====[DAFTAR MENU]=====\n> /nulis [baris1;baris2;baris3]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /ydl [link yt]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /pasangan [namamu] [nama pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]\n> /rangkum [teks]\n> /loli\n> /wallpaper\n========================\n\n
 =====[CATATAN]=====\n> Tolong bot nya jangan di spam😣\n> Cintai bot nya seperti kamu mencintai dia🤗\n> Semua perintah yang membutuhkan teks tidak perlu menggunakan tanda []👈\n> Masih bingung dengan fitur heckayo🤨? gunakan perintah /infomenu\n> Bot masih dalam tahap pengembangan🔧\n> Terima kasih sudah menggunakan Bot Heckayo😍\n===================\n\n
 > Beritahu pembuat bot jika saya mati atau jika kamu menemukan bug dan perintah yang malfungsi :\n> https://t.me/MrHecka\n\n
 > Support bot ini dengan cara donasi ke :\n> https://saweria.co/heckayo\n> https://paypal.me/mrplo/\n\n
@@ -42,8 +42,7 @@ return bot.sendMessage
 (msg.from.id, `_______________\n\n🤖INFO MENU🤖!\n\n===[Info Menu Fitur Heckayo]===\n\n    
 /nulis = Untuk menulis tanpa membutuhkan pulpen atau kertas \n(Contoh Perintah : /nulis Nama : Ucup;Kelas : 3 SD;Absen : 28) Gunakan titik koma untuk mengganti baris!\n\n
 /anime = Untuk mencari info seputar anime, jumlah episode, sinopsis, rating, dan lainnya \n(Contoh Perintah : /anime death note)\n\n
-/ytmp4 = Untuk mendownload video dari youtube berformat mp4 \n(Contoh Perintah : /ytmp4 https://youtu.be/dQw4w9WgXcQ)\n\n
-/ytmp3 = Untuk mendownload video dari youtube berformat mp3 \n(Contoh Perintah : /ytmp3 https://youtu.be/dQw4w9WgXcQ)\n\n
+/ytdl = Untuk mendownload video dari youtube berformat mp4 dan mp3 \n(Contoh Perintah : /ytdl https://youtu.be/dQw4w9WgXcQ)\n\n
 /cekresi = Untuk mengecek resi atau tracking paket lewat kurir dan resi yang di tulis \n(Contoh Perintah : /cekresi jne 4105xxxxxxxx320)\n\n
 /brainly = Untuk mencari jawaban dari brainly \n(Contoh Perintah : /brainly kenapa bumi bulat)\n\n
 /lirik = Untuk mencari lirik musik \n(Contoh Perintah : /lirik vierra seandainya)\n\n
@@ -71,8 +70,7 @@ _______________
 require('./nulis.js')(bot)
 require('./loli.js')(bot)
 require('./anime.js')(bot)
-require('./ytmp4.js')(bot)
-require('./ytmp3.js')(bot)
+require('./ytdl.js')(bot)
 require('./cekresi.js')(bot)
 require('./brainly.js')(bot)
 require('./lirik.js')(bot)
