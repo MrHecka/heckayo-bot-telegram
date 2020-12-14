@@ -12,7 +12,7 @@ const bot = new TeleBot({
 
 module.exports = bot => {
 
-    bot.on(/^\/anime (.+)$/, async (msg, args) => {
+    bot.on(/^\/anime ([\s\S]+)/, async (msg, args) => {
     const arg = args.match[1]
     const search = arg
     kitsu.searchAnime(search).then(async result => {

@@ -9,7 +9,7 @@ const bot = new TeleBot({
     token: process.env.TOKEN
 })
 module.exports = bot => {
-bot.on(/^\/tiktokdl (.+)$/, async (msg, args) => {
+bot.on(/^\/tiktokdl ([\s\S]+)/, async (msg, args) => {
     bot.sendMessage(msg.from.id, 'Sedang mendownload....Harap sabar....')
     let arg = args.match[1]
     axios.get(`${links}/tiktok?URL=${arg}`)

@@ -10,7 +10,7 @@ const bot = new TeleBot({
     token: process.env.TOKEN
 })
 module.exports = bot => {
-bot.on(/^\/fbdl (.+)$/, async (msg, args) => {
+bot.on(/^\/fbdl ([\s\S]+)/, async (msg, args) => {
     let arg = args.match[1]
     bot.sendMessage(msg.from.id, 'Sedang mendownload....Harap sabar....')
     fbdl.getInfo(arg)

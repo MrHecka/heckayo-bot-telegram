@@ -11,7 +11,7 @@ const url = 'https://st4rz.herokuapp.com/api/ytv2?url='
 
 module.exports = bot => {
 
-bot.on(/^\/ytmp4 (.+)$/, async (msg, args) => {
+bot.on(/^\/ytmp4 ([\s\S]+)/, async (msg, args) => {
   const arg = args.match[1]
   bot.sendMessage(msg.from.id, 'Sabar ngab...lagi download...')
   axios

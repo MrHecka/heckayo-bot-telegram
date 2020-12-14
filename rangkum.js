@@ -8,7 +8,7 @@ const bot = new TeleBot({
 
 
 module.exports = bot => {
-    bot.on(/^\/rangkum (.+)$/, async (msg, args) => {
+    bot.on(/^\/rangkum ([\s\S]+)/, async (msg, args) => {
         let arg = args.match[1]
         bot.sendMessage(msg.from.id, 'Sedang merangkum....')
 

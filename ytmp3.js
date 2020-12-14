@@ -10,7 +10,7 @@ const bot = new TeleBot({
 
 module.exports = bot => {
 
-bot.on(/^\/ytmp3 (.+)$/, async (msg, props) => {
+bot.on(/^\/ytmp3 ([\s\S]+)/, async (msg, props) => {
     const url = props.match[1];
     const video = ytdl(url, {
       quality: "lowestaudio"

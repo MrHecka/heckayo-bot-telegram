@@ -10,7 +10,7 @@ const bot = new TeleBot({
 
 
 module.exports = bot => {
-    bot.on(/^\/brainly (.+)$/, async (msg, args) => {
+    bot.on(/^\/brainly ([\s\S]+)/, async (msg, args) => {
         let arg = args.match[1]
         const url = 'http://api.farzain.com/brainly.php?id='
         const api = process.env.apibrainly

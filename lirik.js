@@ -9,7 +9,7 @@ const bot = new TeleBot({
 
 
 module.exports = bot => {
-    bot.on(/^\/lirik (.+)$/, async (msg, args) => {
+    bot.on(/^\/lirik ([\s\S]+)/, async (msg, args) => {
     
     bot.sendMessage(msg.from.id, 'Tunggu sebentar....')
 

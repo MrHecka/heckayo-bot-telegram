@@ -11,7 +11,7 @@ const bot = new TeleBot({
 
 module.exports = bot => {
 
-    bot.on(/^\/animedl (.+)$/, async (msg, args) => {
+    bot.on(/^\/animedl ([\s\S]+)/, async (msg, args) => {
         let arg = args.match[1]
         bot.sendMessage(msg.from.id, 'Sedang mencari anime....')
         axios
