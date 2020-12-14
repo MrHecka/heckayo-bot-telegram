@@ -23,11 +23,11 @@ bot.on(/^\/ytdl (.+)$/, async (msg, args) => {
     TinyURL.shorten(result.data.url_audio, async(urlaudio) => {
     return bot.sendMessage(msg.from.id, `✅BERHASIL MEMBUAT LINK DOWNLOAD✅ | ${result.data.title}\n\nJudul : ${result.data.title}\n\nDeskripsi : ${result.data.desc}\n\nTotal Durasi : ${result.data.duration} | Menit|Detik\n\nLink Download MP4 (Video) : ${urlvideo}\nLink Download MP3 (Musik) : ${urlaudio}`)
   
-    }).catch((err) => {
-      bot.sendMessage(msg.from.id, `ERROR | ${err}`)
+    })
 
   })
-})
+}).catch((err) => {
+  return bot.sendMessage(msg.from.id, `ERROR | ${err}`)
       
 })
 
