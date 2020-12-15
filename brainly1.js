@@ -21,29 +21,19 @@ return bot.sendMessage
 (msg.from.id, `
 ===[Brainly]===\n\n
 1.) Pertanyaan : \n${res.data[0].pertanyaan}\n
-Jawaban : \n${res.data[0].jawaban[0].text}\n
-Foto Pertanyaan : ${res.data[0].questionMedia[0]}\n
-Foto Jawaban : ${res.data[0].jawaban[0].media[0]}\n\n
+Jawaban : \n${res.data[0].jawaban[0].text}\n\n
 
 2.) Pertanyaan : \n${res.data[1].pertanyaan}\n
-Jawaban : \n${res.data[1].jawaban[0].text}\n
-Foto Pertanyaan : ${res.data[1].questionMedia[0]}\n
-Foto Jawaban : ${res.data[1].jawaban[0].media[0]}\n\n
+Jawaban : \n${res.data[1].jawaban[0].text}\n\n
 
 3.) Pertanyaan : \n${res.data[2].pertanyaan}\n
-Jawaban : \n${res.data[2].jawaban[0].text}\n
-Foto Pertanyaan : ${res.data[2].questionMedia[0]}\n
-Foto Jawaban : ${res.data[2].jawaban[0].media[0]}\n\n
+Jawaban : \n${res.data[2].jawaban[0].text}\n\n
 
 4.) Pertanyaan : \n${res.data[3].pertanyaan}\n
-Jawaban : \n${res.data[3].jawaban[0].text}\n
-Foto Pertanyaan : ${res.data[3].questionMedia[0]}\n
-Foto Jawaban : ${res.data[3].jawaban[0].media[0]}\n\n
+Jawaban : \n${res.data[3].jawaban[0].text}\n\n
 
 5.) Pertanyaan : \n${res.data[4].pertanyaan}\n
-Jawaban : \n${res.data[4].jawaban[0].text}\n
-Foto Pertanyaan : ${res.data[4].questionMedia[0]}\n
-Foto Jawaban : ${res.data[4].jawaban[0].media[0]}\n\n
+Jawaban : \n${res.data[4].jawaban[0].text}\n\n
 
 =====================
 
