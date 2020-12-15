@@ -17,7 +17,8 @@ module.exports = bot => {
         brainly(arg.toString(),Number(5)).then((res) => {
 
             let brainlyResult = []
-            res.data.forEach((ask) => {
+            let databrainly = res.data
+            databrainly.forEach((ask) => {
                 let opt = {
                     pertanyaan: ask.pertanyaan,
                     fotoPertanyaan: ask.questionMedia
