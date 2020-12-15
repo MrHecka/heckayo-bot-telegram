@@ -40,7 +40,7 @@ Jawaban : \n${res.data[4].jawaban[0].text}\n\n
 `);
 
           }).catch((err)=> {
-              return bot.sendMessage(msg.from.id, `ERROR | ${err}`);
+              bot.sendMessage(msg.from.id, `ERROR | ${err}`);
           });
           
     
