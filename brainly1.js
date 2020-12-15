@@ -14,7 +14,7 @@ module.exports = bot => {
     bot.on(/^\/brainly2 ([\s\S]+)/, async (msg, args) => {
         let arg = args.match[1]
         bot.sendMessage(msg.from.id, 'Sedang mencari jawaban...')
-        brainly(arg,Number(10)).then((res) => {
+        brainly(arg,Number(5)).then((res) => {
             let brainlyResult = []
             res.data.forEach((ask) => {
                 let opt = {
@@ -41,10 +41,6 @@ let brainly4 = `${brainlyResult[3].fotoPertanyaan.toString().replace(/,/g, ' \n'
 let brainly44 = `${brainlyResult[3].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`
 let brainly5 = `${brainlyResult[4].fotoPertanyaan.toString().replace(/,/g, ' \n')}`
 let brainly55 = `${brainlyResult[4].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`
-let brainly6 = `${brainlyResult[5].fotoPertanyaan.toString().replace(/,/g, ' \n')}`
-let brainly66 = `${brainlyResult[5].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`
-let brainly7 = `${brainlyResult[6].fotoPertanyaan.toString().replace(/,/g, ' \n')}`
-let brainly77 = `${brainlyResult[6].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`
 
 
 return bot.sendMessage
@@ -74,16 +70,6 @@ Foto Jawaban : ${brainly44}\n\n
 Jawaban : \n${brainlyResult[4].jawaban.judulJawaban}\n
 Foto Pertanyaan : ${brainly5}\n
 Foto Jawaban : ${brainly55}\n\n
-
-6.) Pertanyaan : \n${brainlyResult[5].pertanyaan}\n
-Jawaban : \n${brainlyResult[5].jawaban.judulJawaban}\n
-Foto Pertanyaan : ${brainly6}\n
-Foto Jawaban : ${brainly66}\n\n
-
-7.) Pertanyaan : \n${brainlyResult[6].pertanyaan}\n
-Jawaban : \n${brainlyResult[6].jawaban.judulJawaban}\n
-Foto Pertanyaan : ${brainly7}\n
-Foto Jawaban : ${brainly77}\n\n
 
 =====================
 
