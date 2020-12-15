@@ -11,9 +11,9 @@ const bot = new TeleBot({
 
 
 module.exports = bot => {
-    bot.on(/^\/translate (.+)$/, async (msg, args) => {
+    bot.on(/^\/translate ([\s\S]+)/, async (msg, args) => {
         let arg = args.match[1]
-        translate(`${arg}`, {from: 'en', to: 'id'}).then(res => {
+        translate(arg, {from: 'en', to: 'id'}).then(res => {
             return bot.sendMessage(msg.from.id, `===[FROM ENGLISH TO BAHASA]===\n\n${res.text}`);
         }).catch(err => {
             return bot.sendMessage(msg.from.id, `ERROR | ${err}`);
