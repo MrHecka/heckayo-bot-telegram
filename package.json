@@ -29,7 +29,7 @@
     "ytdl-core": "^4.1.4"
   },
   "engines": {
-    "node": "12.x"
+    "node": "15.x"
   },
   "license": "MIT",
   "keywords": [
