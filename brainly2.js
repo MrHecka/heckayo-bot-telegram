@@ -1,4 +1,4 @@
-console.log('brainly.js aktif!');
+console.log('brainly2.js aktif!');
 
 const TeleBot = require('telebot');
 const delay = require('delay');
@@ -15,7 +15,7 @@ module.exports = bot => {
         const url = 'http://api.farzain.com/brainly.php?id='
         const api = process.env.apibrainly
 
-        bot.sendMessage(msg.from.id, 'Tunggu sebentar...Heckayo sedang mengambil data....')
+        bot.sendMessage(msg.from.id, 'Tunggu sebentar...Heckayo sedang mencari jawaban....')
         await delay(1000)
         
         axios
@@ -39,13 +39,14 @@ msg.from.id,
 `)
 
 
+        }).catch((err) => {
+            return bot.sendMessage(msg.from.id, `ERROR | ${err}`)
         })
     
     
     })
 
 }
-
 
 
 
