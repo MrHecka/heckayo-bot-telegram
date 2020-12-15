@@ -17,12 +17,14 @@
     "kitsu.js": "^2.0.0",
     "lodash": "^4.17.20",
     "needle": "^2.5.2",
+    "qrcode": "^1.4.4",
     "snekfetch": "^4.0.4",
     "telebot": "^1.4.1",
     "text-summarisation": "^2.0.0",
     "tiktok-scraper": "^1.4.5",
     "tinyurl": "^1.1.7",
     "translation-google": "^0.2.1",
+    "video-url-link": "^0.1.5",
     "ytdl-core": "^4.1.4"
   },
   "engines": {
