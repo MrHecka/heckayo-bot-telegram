@@ -18,7 +18,7 @@ module.exports = bot => {
 
             let brainlyResult = []
             let databrainly = res.data
-            databrainly.forEach(function(ask) {
+            databrainly.map(function(ask) {
                 let opt = {
                     pertanyaan: ask.pertanyaan,
                     fotoPertanyaan: ask.questionMedia
