@@ -14,7 +14,7 @@ module.exports = bot => {
     bot.on(/^\/brainly2 ([\s\S]+)/, async (msg, args) => {
         let arg = args.match[1]
         bot.sendMessage(msg.from.id, 'Sedang mencari jawaban...')
-        brainly(arg,Number(5)).then((res) => {
+        brainly(arg).then((res) => {
             let brainlyResult = []
             res.data.forEach((ask) => {
                 let opt = {
