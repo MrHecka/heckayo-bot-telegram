@@ -7,40 +7,40 @@ const brainly = require('brainly-scraper');
 
 const bot = new TeleBot({
     token: process.env.TOKEN
-})
+});
 
 
 module.exports = bot => {
     bot.on(/^\/brainly2 ([\s\S]+)/, async (msg, args) => {
-        let arg = args.match[1]
-        bot.sendMessage(msg.from.id, 'Sedang mencari jawaban...')
+        let arg = args.match[1];
+        bot.sendMessage(msg.from.id, 'Sedang mencari jawaban...');
         brainly(arg).then((res) => {
-            let brainlyResult = []
+            let brainlyResult = [];
             res.data.forEach((ask) => {
                 let opt = {
                     pertanyaan: ask.pertanyaan,
                     fotoPertanyaan: ask.questionMedia
-                }
+                };
                 ask.jawaban.forEach(answer => {
                     opt.jawaban = {
                         judulJawaban: answer.text,
                         fotoJawaban: answer.media
-                    }
-                })
+                    };
+                });
           
-                brainlyResult.push(opt)
-                })
+                brainlyResult.push(opt);
+                });
 
-let brainly1 = `${brainlyResult[0].fotoPertanyaan.toString().replace(/,/g, ' \n')}`
-let brainly11 = `${brainlyResult[0].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`
-let brainly2 = `${brainlyResult[1].fotoPertanyaan.toString().replace(/,/g, ' \n')}`
-let brainly22 = `${brainlyResult[1].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`
-let brainly3 = `${brainlyResult[2].fotoPertanyaan.toString().replace(/,/g, ' \n')}`
-let brainly33 = `${brainlyResult[2].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`
-let brainly4 = `${brainlyResult[3].fotoPertanyaan.toString().replace(/,/g, ' \n')}`
-let brainly44 = `${brainlyResult[3].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`
-let brainly5 = `${brainlyResult[4].fotoPertanyaan.toString().replace(/,/g, ' \n')}`
-let brainly55 = `${brainlyResult[4].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`
+let brainly1 = `${brainlyResult[0].fotoPertanyaan.toString().replace(/,/g, ' \n')}`;
+let brainly11 = `${brainlyResult[0].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`;
+let brainly2 = `${brainlyResult[1].fotoPertanyaan.toString().replace(/,/g, ' \n')}`;
+let brainly22 = `${brainlyResult[1].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`;
+let brainly3 = `${brainlyResult[2].fotoPertanyaan.toString().replace(/,/g, ' \n')}`;
+let brainly33 = `${brainlyResult[2].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`;
+let brainly4 = `${brainlyResult[3].fotoPertanyaan.toString().replace(/,/g, ' \n')}`;
+let brainly44 = `${brainlyResult[3].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`;
+let brainly5 = `${brainlyResult[4].fotoPertanyaan.toString().replace(/,/g, ' \n')}`;
+let brainly55 = `${brainlyResult[4].jawaban.fotoJawaban.toString().replace(/,/g, ' \n')}`;
 
 
 return bot.sendMessage
@@ -73,16 +73,16 @@ Foto Jawaban : ${brainly55}\n\n
 
 =====================
 
-`)
+`);
           }).catch((err)=> {
-              return bot.sendMessage(msg.from.id, `ERROR | ${err}`)
-          })
+              return bot.sendMessage(msg.from.id, `ERROR | ${err}`);
+          });
           
     
     
-    })
+    });
 
-}
+};
 
 
 
