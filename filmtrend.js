@@ -81,7 +81,7 @@ Ketik /filmdetail 15 *(Untuk lebih detail)*\n\n
 
 TRENDING #16\n
 Judul : *${res.data.results[15].title}*
-Ketik /filmdetail 16 (Untuk lebih detail)\n\n
+Ketik /filmdetail 16 *(Untuk lebih detail)*\n\n
 
 TRENDING #17\n
 Judul : *${res.data.results[16].title}*
