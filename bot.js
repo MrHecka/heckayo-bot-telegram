@@ -15,13 +15,13 @@ bot.on(['/start', '/halo'], async (msg) => {
     bot.sendMessage(msg.from.id, `Halo Selamat Datang, ${msg.from.username}! ^_^`);
     await delay (500)
     return bot.sendMessage (
-    msg.from.id, 'Halo ini adalah BOT Heckayo Versi Telegram😄!\n\n____________\n\nGunakan perintah /menu untuk melihat semua fitur yang ada di Bot Heckayo, dan gunakan perintah /infomenu untuk melihat informasi dan semua contoh perintah fitur yang ada di Bot Heckayo, terima kasih😉\n\n____________\n\n🤖VERSI BOT HECKAYO : v1.6🤖\n\nAdded /twtdl✅\nAdded /qrcode✅\nFixed translate/terjemahan error : undefined✅\nFixed some code✅')
+    msg.from.id, 'Halo ini adalah BOT Heckayo Versi Telegram😄!\n\n____________\n\nGunakan perintah /menu untuk melihat semua fitur yang ada di Bot Heckayo, dan gunakan perintah /infomenu untuk melihat informasi dan semua contoh perintah fitur yang ada di Bot Heckayo, terima kasih😉\n\n____________\n\n🤖VERSI BOT HECKAYO : v1.7🤖\n\nAdded /filmtrend & /filmdetail✅\nAdded /slots✅')
 })
 
 bot.on(['/menu'], async (msg) => {
     return bot.sendMessage
 (msg.from.id, `_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\n\n
-=====[DAFTAR MENU]=====\n> /nulis [teks]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /twtdl [link twitter]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /qrcode [teks]\n> /pasangan [namamu] [nama pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]\n> /rangkum [teks]\n> /loli\n> /wallpaper\n========================\n\n
+=====[DAFTAR MENU]=====\n> /nulis [teks]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /filmtrend\n> /filmdetail [angka 1-20]\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /twtdl [link twitter]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /qrcode [teks]\n> /pasangan [namamu] [nama pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]\n> /rangkum [teks]\n> /loli\n> /wallpaper\n========================\n\n
 =====[CATATAN]=====\n> Tolong bot nya jangan di spam😣\n> Cintai bot nya seperti kamu mencintai dia🤗\n> Semua perintah yang membutuhkan teks tidak perlu menggunakan tanda []👈\n> Masih bingung dengan fitur heckayo🤨? gunakan perintah /infomenu\n> Bot masih dalam tahap pengembangan🔧\n> Terima kasih sudah menggunakan Bot Heckayo😍\n===================\n\n
 > Beritahu pembuat bot jika saya mati atau jika kamu menemukan bug dan perintah yang malfungsi :\n> https://t.me/MrHecka\n\n
 > Support bot ini dengan cara donasi ke :\n> https://saweria.co/heckayo\n> https://paypal.me/mrplo/\n\n
@@ -51,7 +51,9 @@ return bot.sendMessage
 /terjemahan = Untuk menerjemahkan dari bahasa indonesia ke bahasa inggris\n(Contoh Perintah : /terjemahan kamu sangat cantik)\n\n
 /rangkum = Untuk merangkum teks, *harap gabung semua kata dan jangan sampai ada garis baru atau shift+enter\n(Contoh Perintah : /rangkum Dulu, penelitian tentang sejarah terbatas pada penelitian...........dst)\n\n
 /twtdl = Untuk mendownload video dari twitter \n(Contoh : /twtdl https://twitter.com/i/status/1338407494339624962)\n\n
-/qrcode = Untuk merubah teks atau link yang kamu tulis menjadi sebuah kode QR \n(Contoh : /qrcode https://google.com)\n\n
+/qrcode = Untuk merubah teks atau link yang kamu tulis menjadi sebuah kode QR \n(Contoh Perintah : /qrcode https://google.com)\n\n
+/filmtrend = Untuk melihat film trending di minggu ini \n(Contoh Perintah : /filmtrend)\n\n
+/filmdetail = Untuk melihat detail filmtrend lebih lengkap \n(Contoh Perintah : /filmdetail 1)\n\n
 
 =====================\n\n
 Nantikan fitur-fitur unik heckayo lainnya, stay tuned terus ya 🦾🤖\n
@@ -82,6 +84,9 @@ require('./terjemahan.js')(bot)
 require('./rangkum.js')(bot)
 require('./twtdl.js')(bot)
 require('./qrcode.js')(bot)
+require('./slots.js')(bot)
+require('./filmtrend.js')(bot)
+require('./filmtrenddetail.js')(bot)
 
 // require disini!
 
