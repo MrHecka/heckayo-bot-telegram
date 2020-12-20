@@ -41,7 +41,7 @@ module.exports = bot => {
             var result360 = JSON.stringify(links360).replace(/,/g, '\n').replace(/"/g, '').replace(/linkall360/g, '').replace(/{/g, '').replace(/}/g, '').replace(/\[/g, '').replace(/\]/g, '');
             var result480 = JSON.stringify(links480).replace(/,/g, '\n').replace(/"/g, '').replace(/linkall480/g, '').replace(/{/g, '').replace(/}/g, '').replace(/\[/g, '').replace(/\]/g, '');
             var result720 = JSON.stringify(links720).replace(/,/g, '\n').replace(/"/g, '').replace(/linkall720/g, '').replace(/{/g, '').replace(/}/g, '').replace(/\[/g, '').replace(/\]/g, '');
-            bot.sendMessage(msg.from.id, `Judul Anime : ${judul}\nLink : ${link1}\n\n⬇️360p⬇️\n${result360}\n\n⬇️480p⬇️\n${result480}\n\n⬇️720p⬇️\n${result720}\n\nNote : Jika link tidak muncul atau gagal, gunakan /animedl [nama anime]`)
+            return bot.sendMessage(msg.from.id, `Judul Anime : ${judul}\nLink : ${link1}\n\n⬇️360p⬇️\n${result360}\n\n⬇️480p⬇️\n${result480}\n\n⬇️720p⬇️\n${result720}\n\nNote : Jika link tidak muncul atau gagal, gunakan /animedl [nama anime]`)
                 })
             })
 
