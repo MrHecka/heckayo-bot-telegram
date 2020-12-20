@@ -20,7 +20,7 @@ bot.on(['/start', '/halo'], async (msg) => {
 
 bot.on(['/menu'], async (msg) => {
     return bot.sendMessage
-(msg.from.id, `_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\n\n
+(msg.from.id, `_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\nBOT LINK : https://telegram.me/HeckayoBot\n
 =====[DAFTAR MENU]=====\n> /nulis [teks]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /animedl2 [nama anime]\n> /filmtrend\n> /filmdetail [angka 1-20]\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /twtdl [link twitter]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /qrcode [teks]\n> /pasangan [namamu] [nama pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]\n> /rangkum [teks]\n> /loli\n> /wallpaper\n> /slots\n========================\n\n
 =====[CATATAN]=====\n> Tolong bot nya jangan di spam😣\n> Cintai bot nya seperti kamu mencintai dia🤗\n> Semua perintah yang membutuhkan teks tidak perlu menggunakan tanda []👈\n> Masih bingung dengan fitur heckayo🤨? gunakan perintah /infomenu\n> Bot masih dalam tahap pengembangan🔧\n> Terima kasih sudah menggunakan Bot Heckayo😍\n===================\n\n
 > Beritahu pembuat bot jika saya mati atau jika kamu menemukan bug dan perintah yang malfungsi :\n> https://t.me/MrHecka\n\n
