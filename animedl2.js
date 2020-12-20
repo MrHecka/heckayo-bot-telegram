@@ -21,9 +21,9 @@ module.exports = bot => {
     
                 
         await axios.get(link1).then(async res => {
-            let links360 = [];
-            let links480 = [];
-            let links720 = [];
+            let links360 = await [];
+            let links480 = await [];
+            let links720 = await [];
             const $$ = await cheerio.load(res.data);
             await $$('div[class="download_box"] > div[class="download"] > div[class="batch-dlcuy"] > ul > li:nth-child(1) > a').each(async (index, value) => {
             let linkall360 = await $$(value).attr('href');
