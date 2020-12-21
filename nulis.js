@@ -33,7 +33,7 @@ module.exports = bot => {
         }
         await bot.sendMessage(msg.from.id, 'Sebentar ya ngab...')
         await delay(2000)
-        await msg.reply.photo(`${body.images}`)
+        await bot.sendPhoto(msg.from.id, `${body.images}`)
         await delay(200)
         return await bot.sendMessage(msg.from.id, 'Sukses!😎')
 

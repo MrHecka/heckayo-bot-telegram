@@ -10,17 +10,17 @@ const bot = new TeleBot({
 
 module.exports = bot => {
     bot.on(['/neko'], async (msg, args) => {
-    const link = 'https://waifu.pics/api/sfw/neko'
-    bot.sendMessage(msg.from.id, 'Sedang mencari kucing poi :v....')
-    axios.get(link)
+    const link = await 'https://waifu.pics/api/sfw/neko'
+    await bot.sendMessage(msg.from.id, 'Sedang mencari kucing poi :v....')
+    await axios.get(link)
     .then(async (res) => {
-        let randomneko = `${res.data.url}`
-        await msg.reply.photo(randomneko)
+        var randomneko = await `${res.data.url}`
+        await bot.sendPhoto(msg.from.id, `${randomneko}`)
         return await bot.sendMessage(msg.from.id, 'KAWAIIIIII😍😍')
 
     })
-    .catch((err) => {
-        return bot.sendMessage(msg.from.id, `ERROR | ${err}`)
+    .catch(async(err) => {
+        return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)
         })
     })
 }

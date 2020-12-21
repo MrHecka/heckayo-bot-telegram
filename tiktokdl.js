@@ -14,12 +14,12 @@ bot.on(/^\/tiktokdl ([\s\S]+)/, async (msg, args) => {
     let arg = args.match[1]
     axios.get(`${links}/tiktok?URL=${arg}`)
     .then(async (res) => {
-	    const vid = `${res.data.mp4direct}`
+	    const vid = await `${res.data.mp4direct}`
         await bot.sendVideo(msg.chat.id, vid, { replyToMessage: msg.message_id })
         return bot.sendMessage(msg.from.id, `✅Berhasil✅ Mengunduh Video Tiktok Dengan\n\nUsername : ${res.data.nameInfo}\n\nDeskripsi : ${res.data.textInfo}\n\nTanggal Upload : ${res.data.timeInfo}`)
     })
-    .catch((err) => {
-        bot.sendMessage(msg.from.id, `ERROR | ${err}`)
+    .catch(async(err) => {
+        return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)
         })
     })
 

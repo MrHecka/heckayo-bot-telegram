@@ -10,21 +10,20 @@ const bot = new TeleBot({
 
 module.exports = bot => {
     bot.on(['/loli'], async (msg, args) => {
-    const link = 'https://arugaz.herokuapp.com/api/randomloli'
-    bot.sendMessage(msg.from.id, 'Sedang mencari dan mengarungi loli....')
-    axios.get(link)
+    const link = await 'https://arugaz.herokuapp.com/api/randomloli'
+    await bot.sendMessage(msg.from.id, 'Sedang mencari dan mengarungi loli....')
+    await axios.get(link)
     .then(async (res) => {
-        let randomloli = `${res.data.result}`
-        await msg.reply.photo(randomloli)
+        let randomloli = await `${res.data.result}`
+        await bot.sendPhoto(msg.from.id, `${randomloli}`)
         return await bot.sendMessage(msg.from.id, 'KAWAIIIIII😍😍')
 
     })
-    .catch((err) => {
-        return bot.sendMessage(msg.from.id, `ERROR | ${err}`)
+    .catch(async(err) => {
+        return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)
         })
     })
 }
-
 
 
 

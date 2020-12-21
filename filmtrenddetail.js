@@ -54,8 +54,8 @@ return await bot.sendMessage
 `, { parseMode: 'Markdown' })
 
 
-        }).catch((err)=> {
-            return bot.sendMessage(msg.from.id, `ERROR | ${err}`)
+        }).catch(async(err)=> {
+            return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)
         })
     })
 }
