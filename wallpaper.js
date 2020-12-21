@@ -17,7 +17,7 @@ module.exports = bot => {
         .get(link)
         .then(async (result) => {
             await bot.sendPhoto(msg.from.id, result.request.res.responseUrl)
-            return bot.sendMessage(msg.from.id, '😍Enjoy Dengan Wallpaper Barunya!😍')
+            return await bot.sendMessage(msg.from.id, '😍Enjoy Dengan Wallpaper Barunya!😍')
         })
 
     })

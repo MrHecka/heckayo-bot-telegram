@@ -1,4 +1,4 @@
-console.log('nulis.js aktif!')
+console.log('nulis2.js aktif!')
 
 const TeleBot = require('telebot')
 const delay = require('delay')
@@ -16,24 +16,29 @@ const bot = new TeleBot({
 
 
 module.exports = bot => {
-    bot.on(/^\/nulis ([\s\S]+)/, async (msg, args) => {
+    bot.on(/^\/nulis2 ([\s\S]+)/, async (msg, args) => {
     let arg = args.match[1]
     if(arg.length < 10) {
         return bot.sendMessage(msg.chat.id, 'Masukkan teks minimal 10 huruf!')
     }
 
 
-    let url = 'http://salism3.pythonanywhere.com/write?text='
+    let url = 'https://st4rz.herokuapp.com/api/nulis?text='
     needle(url + arg, async (err, resp, body) => {
         if (_.isEmpty(body) === true) {
         return bot.sendMessage(msg.chat.id, 'Gagal!, coba lagi pelan-pelan...jangan lupa berdoa juga!')
         }
-        if (_.isEmpty(body.images) === true) { 
+        if (_.isEmpty(body.result) === true) { 
         return bot.sendMessage(msg.chat.id, 'Gagal!, Masukkan teks terlebih dahulu!')
         }
-        await bot.sendMessage(msg.from.id, 'Sebentar ya ngab...')
+        bot.sendMessage(msg.from.id, 'Sebentar ya ngab...')
+        const file = body.result
+        const fileOpts = {
+        filename: 'image',
+        contentType: 'image/jpg',
+        };
         await delay(2000)
-        await msg.reply.photo(`${body.images}`)
+        await bot.sendPhoto(msg.from.id, Buffer.from(file.substr(23), 'base64'), fileOpts);
         await delay(200)
         return await bot.sendMessage(msg.from.id, 'Sukses!😎')
 

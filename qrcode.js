@@ -8,17 +8,15 @@ const bot = new TeleBot({
 module.exports = bot => {
 bot.on(/^\/qrcode ([\s\S]+)/, async (msg, args) => {
     const arg = args.match[1]
-    QRCode.toDataURL(arg, function (err, url) {
+    QRCode.toDataURL(arg, async function (err, url) {
         const file = url
         const fileOpts = {
         filename: 'image',
         contentType: 'image/jpg',
         };
-        bot.sendPhoto(msg.from.id, Buffer.from(file.substr(22), 'base64'), fileOpts);
-        return bot.sendMessage(msg.from.id, '✅QR CODE BERHASIL DIBUAT✅')
-        }).catch((err) => {
-            return bot.sendMessage(msg.from.id, `ERROR NGAB | ${err}`)
+        await bot.sendPhoto(msg.from.id, Buffer.from(file.substr(22), 'base64'), fileOpts);
+        return await bot.sendMessage(msg.from.id, '✅QR CODE BERHASIL DIBUAT✅')
+            })
         })
-    })
 }
 
