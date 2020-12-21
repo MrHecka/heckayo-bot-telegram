@@ -15,13 +15,13 @@ bot.on(['/start', '/halo'], async (msg) => {
     bot.sendMessage(msg.from.id, `Halo Selamat Datang, ${msg.from.username}! ^_^`);
     await delay (500)
     return bot.sendMessage (
-    msg.from.id, 'Halo ini adalah BOT Heckayo Versi Telegram😄!\n\n____________\n\nGunakan perintah /menu untuk melihat semua fitur yang ada di Bot Heckayo, dan gunakan perintah /infomenu untuk melihat informasi dan semua contoh perintah fitur yang ada di Bot Heckayo, terima kasih😉\n\n____________\n\n🤖VERSI BOT HECKAYO : v1.9🤖\n\nAdded /nulis2✅\nAdded /waifu✅\nAdded /neko✅')
+    msg.from.id, 'Halo ini adalah BOT Heckayo Versi Telegram😄!\n\n____________\n\nGunakan perintah /menu untuk melihat semua fitur yang ada di Bot Heckayo, dan gunakan perintah /infomenu untuk melihat informasi dan semua contoh perintah fitur yang ada di Bot Heckayo, terima kasih😉\n\n____________\n\n🤖VERSI BOT HECKAYO : v2.0🤖\n\nAdded /nulis3✅\nUpdated /animedl3✅')
 })
 
 bot.on(['/menu'], async (msg) => {
     return bot.sendMessage
 (msg.from.id, `_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\nBOT LINK : https://telegram.me/HeckayoBot\n
-=====[DAFTAR MENU]=====\n> /nulis [teks]\n> /nulis2 [teks]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /animedl2 [nama anime]\n> /animedl3 [nama anime]\n> /filmtrend\n> /filmdetail [angka 1-20]\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /twtdl [link twitter]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /qrcode [teks]\n> /pasangan [namamu] [nama pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]\n> /rangkum [teks]\n> /loli\n> /neko\n> /waifu\n> /wallpaper\n> /slots\n========================\n\n
+=====[DAFTAR MENU]=====\n> /nulis [teks]\n> /nulis2 [teks]\n> /nulis3 [teks]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /animedl2 [nama anime]\n> /animedl3 [nama anime]\n> /filmtrend\n> /filmdetail [angka 1-20]\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /twtdl [link twitter]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /qrcode [teks]\n> /pasangan [namamu] [nama pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]\n> /rangkum [teks]\n> /loli\n> /neko\n> /waifu\n> /wallpaper\n> /slots\n========================\n\n
 =====[CATATAN]=====\n> Tolong bot nya jangan di spam😣\n> Cintai bot nya seperti kamu mencintai dia🤗\n> Semua perintah yang membutuhkan teks tidak perlu menggunakan tanda []👈\n> Masih bingung dengan fitur heckayo🤨? gunakan perintah /infomenu\n> Bot masih dalam tahap pengembangan🔧\n> Terima kasih sudah menggunakan Bot Heckayo😍\n===================\n\n
 > Beritahu pembuat bot jika saya mati atau jika kamu menemukan bug dan perintah yang malfungsi :\n> https://t.me/MrHecka\n\n
 > Support bot ini dengan cara donasi ke :\n> https://saweria.co/heckayo\n> https://paypal.me/mrplo/\n\n
@@ -34,7 +34,7 @@ bot.on(['/infomenu'], async (msg) => {
 
 return bot.sendMessage
 (msg.from.id, `_______________\n\n🤖INFO MENU🤖!\n\n===[Info Menu Fitur Heckayo]===\n\n    
-/nulis = Untuk menulis tanpa membutuhkan pulpen atau kertas \n(Contoh Perintah : /nulis Halo nama saya ucup < sama dengan /nulis2)\n\n
+/nulis = Untuk menulis tanpa membutuhkan pulpen atau kertas \n(Contoh Perintah : /nulis Halo nama saya ucup < sama dengan /nulis2 dan /nulis3)\n\n
 /anime = Untuk mencari info seputar anime, jumlah episode, sinopsis, rating, dan lainnya \n(Contoh Perintah : /anime death note)\n\n
 /ytmp4 = Untuk mendownload video dari youtube berformat mp4 \n(Contoh Perintah : /ytmp4 https://youtu.be/dQw4w9WgXcQ)\n\n
 /ytmp3 = Untuk mendownload video dari youtube berformat mp4 \n(Contoh Perintah : /ytmp3 https://youtu.be/dQw4w9WgXcQ)\n\n
@@ -71,6 +71,7 @@ _______________
 
 require('./nulis.js')(bot)
 require('./nulis2.js')(bot)
+require('./nulis3.js')(bot)
 require('./loli.js')(bot)
 require('./neko.js')(bot)
 require('./waifu.js')(bot)

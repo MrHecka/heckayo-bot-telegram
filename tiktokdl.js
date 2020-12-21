@@ -24,3 +24,7 @@ bot.on(/^\/tiktokdl ([\s\S]+)/, async (msg, args) => {
     })
 
 }
+
+
+
+
