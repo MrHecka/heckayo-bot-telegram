@@ -28,7 +28,7 @@
     "tinyurl": "^1.1.7",
     "translation-google": "^0.2.1",
     "video-url-link": "^0.1.5",
-    "ytdl-core": "^4.1.4"
+    "ytdl-core": "^4.2.1"
   },
   "engines": {
     "node": "15.4.0"
