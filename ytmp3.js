@@ -8,41 +8,44 @@ const bot = new TeleBot({
     token: process.env.TOKEN
 })
 
+let nama = await Math.floor(Math.random() * Math.floor(1000))
+
 module.exports = bot => {
 
-bot.on(/^\/ytmp3 ([\s\S]+)/, async (msg, props) => {
-    const url = await props.match[1];
-    const video = await ytdl(url, {
-      quality: "lowestaudio"
-    });
-    let nama = await Math.floor(Math.random() * Math.floor(1000))
-    await video.pipe(fs.createWriteStream(`${__dirname}/ytmp3${nama}.mp3`));
-    await bot.sendMessage(
-      msg.from.id,
-      "Sabar lagi persiapan download ngab...",
-      { replyToMessage: msg.message_id }
-    );
-    await video.on("info", async function (info) {
-      await bot.sendMessage(msg.from.id, 'Sabar ngab...lagi download...')
-    });
-    await video.on("end", async function () {
-      await bot.sendMessage(msg.from.id, "LOADING...██████████████]99%\nSabar dikit lagi");
-      let vid = await `${__dirname}/ytmp3${nama}.mp3`;
-      let stats = await fs.statSync(vid);
-      let fileSizeInBytes = await stats.size;
-      var fileSizeInMegabytes = await fileSizeInBytes / (1024 * 1024).toFixed(2);
-      if (Number(fileSizeInMegabytes) >= 50) {
-        bot.sendMessage(
-          msg.chat.id,
-          `File video terlalu besar untuk di convert ke mp3....gagal mengirim😢`
-        );
-      } else {
-        bot
-          .sendAudio(msg.chat.id, vid, { replyToMessage: msg.message_id })
-          .catch((error) => console.log(error));
-        fs.unlinkSync(vid, (error) => console.log(error));
-      }
-    });
+function sendFile(msg, file){
+    msg.reply.file(file)
+}
+
+bot.on(/^\/ytmp3 (.+)$/, async (msg, props) => {
+  try {
+    const text = props.match[1];
+    if(!ytdl.validateURL(text)){
+        msg.reply.text('Link youtube tidak valid!');
+    }
+    ytdl.getInfo(text, {filter:"audioonly"}, (err, info) => {
+        if (err) throw err;
+        msg.reply.text(info);
+
+        // detect kalau file nya udah ada
+        if (fs.existsSync(info.title+nama+'.mp3')) {
+            sendFile(msg, info.title+nama+'.mp3');
+            return;
+        }
+
+        msg.reply.text('Starting Download...');
+        ytdl(text,{filter:"audioonly"})
+        .pipe(fs.createWriteStream(info.title+nama+'.mp3'))
+        .on('finish', () => {
+            sendFile(msg, info.title+nama+'.mp3');
+            fs.unlinkSync(info.title+nama+'.mp3', (error) => console.log(error));
+        });
+        
+        //hapus setelah 24 jam
+        setTimeout(fs.unlinkSync, 24*60*60*1000, info.title+'.mp3');
+      });
+} catch (e) {
+    msg.reply.text('Error ngab '+ e);
+}
   });
 }
 
