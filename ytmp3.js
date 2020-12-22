@@ -16,7 +16,7 @@ bot.on(/^\/ytmp3 ([\s\S]+)/, async (msg, props) => {
       quality: "lowestaudio"
     });
     let nama = await Math.floor(Math.random() * Math.floor(1000))
-    await video.pipe(fs.createWriteStream(`${__dirname}/ytmp3${nama}.mp3`));
+    await video.pipe(fs.createWriteStream(__dirname, `/ytmp3${nama}.mp3`));
     await bot.sendMessage(
       msg.from.id,
       "Sabar lagi persiapan download ngab...",
@@ -40,7 +40,7 @@ bot.on(/^\/ytmp3 ([\s\S]+)/, async (msg, props) => {
         bot
           .sendAudio(msg.chat.id, vid, { replyToMessage: msg.message_id })
           .catch((error) => console.log(error));
-        fs.unlink(vid, (error) => console.log(error));
+        fs.unlinkSync(vid, (error) => console.log(error));
       }
     });
   });
