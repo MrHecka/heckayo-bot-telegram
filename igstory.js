@@ -24,6 +24,7 @@ bot.on(/^\/igstory (.+)$/, async (msg, args) => {
     .then((story) => {
 
     async function igstoryscraper() {
+        try{
 
         if(story.items[0] === undefined) {
             return msg.reply.text('USERNAME TIDAK MEMILIKI STORY!')
@@ -528,7 +529,11 @@ bot.on(/^\/igstory (.+)$/, async (msg, args) => {
         }
         
     
+    }catch(err) {
+        return bot.sendMessage(msg.from.id, `ERROR | ${err}`)
     }
+    
+} 
 
     igstoryscraper()
     .catch(async(err)=>{
