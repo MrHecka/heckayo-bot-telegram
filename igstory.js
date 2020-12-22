@@ -529,9 +529,11 @@ bot.on(/^\/igstory (.+)$/, async (msg, args) => {
         
     
     }
-    
 
-igstoryscraper()
+    igstoryscraper()
+    .catch(async(err)=>{
+        return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)
+    })
 
     }).catch(async(err) => {
         return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)

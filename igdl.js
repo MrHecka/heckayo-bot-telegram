@@ -86,12 +86,18 @@ bot.on(/^\/igdl (.+)$/, async (msg, args) => {
     }
     
     igscraper()
+    .catch(async(err)=>{
+        return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)
+    })
     
 
 
         }).catch(async(err) => {
             return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)
+
         })
+    
+        
   })
 }
 
