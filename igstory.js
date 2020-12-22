@@ -33,12 +33,12 @@ bot.on(/^\/igstory ([\s\S]+)/, async (msg, args) => {
         return bot.sendMessage(msg.from.id, 'Error ngab...Masukkin angka urutan story nya!')
     }
 
-    if(!username) {
-        return bot.sendMessage(msg.from.id, 'Masukkin username instagram nya ngab!')
+    if(!args.match[1].split(' ')[0]) {
+        return bot.sendMessage(msg.from.id, 'Masukkin urutan nomor ig story nya ngab!')
     }
 
-    if(!nomor) {
-        return bot.sendMessage(msg.from.id, 'Masukkin urutan ke berapa ig story yang mau di download!')
+    if(!args.match[1].split(' ')[1]) {
+        return bot.sendMessage(msg.from.id, 'Masukkin username instagram nya ngab!')
     }
 
     await bot.sendDocument(msg.from.id, story.items[nomor - 1].url)

@@ -8,8 +8,10 @@ module.exports = bot => {
 bot.on(/^\/cekresi (.+)$/, async (msg, args) => {
     const kurir = args.match[1].split(' ')[0]
     const resi = args.match[1].split(' ')[1]
-    if(!args.match[0,1]) return bot.sendMessage(msg.from.id,'Masukkan nama ekspedisi dan nomor resi terlebih dahulu! | [Contoh : /cekresi jnt JB00xxxxxxxx]')
-
+    if(!args.match[0,1]) {
+        return bot.sendMessage(msg.from.id,'Masukkan nama ekspedisi dan nomor resi terlebih dahulu! | [Contoh : /cekresi jnt JB00xxxxxxxx]')
+    }
+    
     bot.sendMessage(msg.from.id, 'Loading ngab...Sabar!')
     let url = 'https://api.terhambar.com/resi'
 
