@@ -3,6 +3,7 @@ console.log('igstory.js aktif!')
 const TeleBot = require('telebot')
 const delay = require('delay')
 const ig = require('scraper-instagram')
+const { isInteger } = require('lodash')
 
 const InstaClient = new ig()
 const bot = new TeleBot({
@@ -33,13 +34,10 @@ bot.on(/^\/igstory ([\s\S]+)/, async (msg, args) => {
         return bot.sendMessage(msg.from.id, 'Error ngab...Masukkin angka urutan story nya!')
     }
 
-    if(!args.match[1].split(' ')[0]) {
-        return bot.sendMessage(msg.from.id, 'Masukkin urutan nomor ig story nya ngab!')
+    if(!isInteger(nomor)) {
+        return bot.sendMessage(msg.from.id, 'Masukkin urutan nomor ig story nya ngab! [Contoh : /igstory 1 anone14_]')
     }
 
-    if(!args.match[1].split(' ')[1]) {
-        return bot.sendMessage(msg.from.id, 'Masukkin username instagram nya ngab!')
-    }
 
     await bot.sendDocument(msg.from.id, story.items[nomor - 1].url)
     return await bot.sendMessage(msg.from.id, `Berhasil Mengambil Story Urutan Ke > ${nomor} < Dari IG Story => ${usernamefix} 😎👌`)    
