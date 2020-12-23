@@ -27,7 +27,7 @@ bot.on(/^\/igstory ([\s\S]+)/, async (msg, args) => {
         return bot.sendMessage(msg.from.id, 'Error ngab...Masukkin angka urutan story nya!')
     }
 
-    if(!isInteger(nomor)) {
+    if(!isNaN(nomor)) {
         return bot.sendMessage(msg.from.id, 'Masukkin urutan nomor ig story nya ngab! [Contoh : /igstory 1 anone14_]')
     }
 
