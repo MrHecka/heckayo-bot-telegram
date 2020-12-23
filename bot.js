@@ -15,13 +15,13 @@ bot.on(['/start', '/halo'], async (msg) => {
     bot.sendMessage(msg.from.id, `Halo Selamat Datang, ${msg.from.username}! ^_^`);
     await delay (500)
     return bot.sendMessage (
-    msg.from.id, 'Halo ini adalah BOT Heckayo Versi Telegram😄!\n\n____________\n\nGunakan perintah /menu untuk melihat semua fitur yang ada di Bot Heckayo, dan gunakan perintah /infomenu untuk melihat informasi dan semua contoh perintah fitur yang ada di Bot Heckayo, terima kasih😉\n\n____________\n\n🤖VERSI BOT HECKAYO : v2.0🤖\n\nAdded /nulis3✅\nUpdated /animedl3✅\nAdded /cewecans✅\nAdded /igdl✅\nAdded /igtv✅\nAdded /igstory✅\nFixed /ytmp3✅\nAdded /igavatar✅')
+    msg.from.id, 'Halo ini adalah BOT Heckayo Versi Telegram😄!\n\n____________\n\nGunakan perintah /menu untuk melihat semua fitur yang ada di Bot Heckayo, dan gunakan perintah /infomenu untuk melihat informasi dan semua contoh perintah fitur yang ada di Bot Heckayo, terima kasih😉\n\n____________\n\n🤖VERSI BOT HECKAYO : v2.1🤖\n\nAdded /nulis3✅\nUpdated /animedl3✅\nAdded /cewecans✅\nAdded /igdl✅\nAdded /igtv✅\nAdded /igstory✅\nFixed /ytmp3✅\nAdded /igavatar✅')
 })
 
 bot.on(['/menu'], async (msg) => {
     return bot.sendMessage
 (msg.from.id, `_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\nBOT LINK : https://telegram.me/HeckayoBot\n
-=====[DAFTAR MENU]=====\n> /nulis [teks]\n> /nulis2 [teks]\n> /nulis3 [teks]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /animedl2 [nama anime]\n> /animedl3 [nama anime]\n> /filmtrend\n> /filmdetail [angka 1-20]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /qrcode [teks]\n> /pasangan [namamu] [nama pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]\n> /rangkum [teks]\n> /loli\n> /neko\n> /waifu\n> /cewecans\n> /wallpaper\n> /slots\n========================\n\n===[Sosmed Downloader]===\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /twtdl [link twitter]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /igdl [link instagram]\n> /igdl2 [link instagram]\n> /igtv [link instagram tv]\n> /igstory [angka] [username ig]\n> /igavatar [username ig]\n========================\n\n
+=====[DAFTAR MENU]=====\n> /nulis [teks]\n> /nulis2 [teks]\n> /nulis3 [teks]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /animedl2 [nama anime]\n> /animedl3 [nama anime]\n> /filmtrend\n> /filmdetail [angka 1-20]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /qrcode [teks]\n> /pasangan [namamu] [nama pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]\n> /rangkum [teks]\n> /loli\n> /neko\n> /waifu\n> /cewecans\n> /wallpaper\n> /slots\n========================\n\n===[Sosmed Downloader]===\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /twtdl [link twitter]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /igdl [link instagram]\n> /igtv [link instagram tv]\n> /igstory [angka] [username ig]\n> /igavatar [username ig]\n========================\n\n
 =====[CATATAN]=====\n> Tolong bot nya jangan di spam😣\n> Cintai bot nya seperti kamu mencintai dia🤗\n> Semua perintah yang membutuhkan teks tidak perlu menggunakan tanda []👈\n> Masih bingung dengan fitur heckayo🤨? gunakan perintah /infomenu\n> Bot masih dalam tahap pengembangan🔧\n> Terima kasih sudah menggunakan Bot Heckayo😍\n===================\n\n
 > Beritahu pembuat bot jika saya mati atau jika kamu menemukan bug dan perintah yang malfungsi :\n> https://t.me/MrHecka\n\n
 > Support bot ini dengan cara donasi ke :\n> https://saweria.co/heckayo\n> https://paypal.me/mrplo/\n\n
@@ -60,7 +60,7 @@ return bot.sendMessage
 /tiktokdl = Untuk mendownload video dari tiktok tanpa watermark \n(Contoh Perintah : /tiktokdl https://www.tiktok.com/@mrhecka/video/6888202589897248001)\n\n
 /fbdl = Untuk mendownload video dari facebook \n(Contoh Perintah : /fbdl https://www.facebook.com/tahilalats/videos/438923400430514)\n\n
 /twtdl = Untuk mendownload video dari twitter \n(Contoh : /twtdl https://twitter.com/i/status/1338407494339624962)\n\n
-/igdl = Untuk mendownload video dan foto di instagram \n(Contoh : /igdl https://www.instagram.com/p/CJGXxSinuld/ < sama dengan /igdl2)\n\n
+/igdl = Untuk mendownload video dan foto di instagram \n(Contoh : /igdl https://www.instagram.com/p/CJGXxSinuld/)\n\n
 /igtv = Untuk mendownload video igtv di instagram \n(Contoh : /igtv https://www.instagram.com/p/CBgc_ZJlVUN/)\n\n
 /igstory = Untuk mendownload video ig story di instagram sesuai angka urutan yang diinput \n(Contoh : /igstory 3 anone14_)\n\n
 /igavatar = Untuk mendownload avatar profil di instagram \n(Contoh : /igavatar anone14_)\n\n
@@ -105,7 +105,6 @@ require('./filmtrend.js')(bot)
 require('./filmtrenddetail.js')(bot)
 require('./cewecans.js')(bot)
 require('./igdl.js')(bot)
-require('./igdl2.js')(bot)
 require('./igtv.js')(bot)
 require('./igstory.js')(bot)
 require('./igavatar.js')(bot)
