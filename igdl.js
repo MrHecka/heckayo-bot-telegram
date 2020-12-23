@@ -2,9 +2,9 @@ console.log('igdl.js aktif!')
 
 const TeleBot = require('telebot')
 const delay = require('delay')
-const ig = require('scraper-instagram')
+const userInstagram = require('user-instagram');
 const isUrl = require('is-url')
-const InstaClient = new ig()
+
 const bot = new TeleBot({
     token: process.env.TOKEN
 })
@@ -21,66 +21,66 @@ bot.on(/^\/igdl (.+)$/, async (msg, args) => {
     let getid = await arg.match(regexpicture)[2]
     await bot.sendMessage(msg.from.id, `Link ID Terdeteksi => ${getid}`)
 
-    await InstaClient.getPost(getid)
-    .then(async(post) =>{
-    let username = await post.author.username
-    let verified = await post.author.verified ? '✅ Verified' : '❎ Tidak Verified'
-    let name = await post.author.name
-    let caption = await post.caption
-    let link = await post.link
+    await userInstagram.getPostData(getid)
+    .then(async(res) =>{
+    let username = await res.owner.username
+    let isverified = await res.owner.isVerified ? '✅ Verified' : '❎ Tidak Verified'
+    let name = await res.owner.full_name
+    let caption = await res.caption
+    let link = await res.link
    
-    await bot.sendMessage(msg.from.id, `👤Berhasil Mendapatkan Konten👤\n\nUsername : ${username} ${verified}\nNama : ${name}\nDeskripsi : ${caption}\n\nLink Postingan : ${link}\n\nEnjoy😎👌`)
+    await bot.sendMessage(msg.from.id, `👤Berhasil Mendapatkan Konten👤\n\nUsername : ${username} ${isverified}\nNama : ${name}\nDeskripsi : ${caption}\n\nLink Postingan : ${link}\n\nEnjoy😎👌`)
     async function igscraper() {
 
-        if(post.contents[0] === undefined) {
+        if(res.childrenPictures[0].displayUrl === undefined) {
             return msg.reply.text('KOSONG TIDAK ADA KONTEN YANG DITEMUKAN!')
-        } else if(post.contents[0].url != undefined){
-            bot.sendDocument(msg.from.id, post.contents[0].url)
+        } else if((res.childrenPictures[0].displayUrl) != undefined){
+            bot.sendDocument(msg.from.id, (res.childrenPictures[0].displayUrl))
         }
-        if(post.contents[1] === undefined) {
+        if(res.childrenPictures[1].displayUrl === undefined) {
             return msg.reply.text('1/10 Konten Ditemukan!')
-        } else if(post.contents[1].url != undefined){
-            bot.sendDocument(msg.from.id, post.contents[1].url)
+        } else if(res.childrenPictures[1] != undefined){
+            bot.sendDocument(msg.from.id, res.childrenPictures[1].displayUrl)
         }
-        if(post.contents[2] === undefined) {
+        if(res.childrenPictures[2] === undefined) {
             return msg.reply.text('2/10 Konten Ditemukan!')
-        } else if(post.contents[2].url != undefined){
-             bot.sendDocument(msg.from.id, post.contents[2].url)
+        } else if(res.childrenPictures[2].displayUrl != undefined){
+             bot.sendDocument(msg.from.id, res.childrenPictures[2].displayUrl)
         }
-        if(post.contents[3] === undefined) {
+        if(res.childrenPictures[3] === undefined) {
             return msg.reply.text('3/10 Konten Ditemukan!')
-        } else if(post.contents[3].url != undefined){
-             bot.sendDocument(msg.from.id, post.contents[3].url)
+        } else if(res.childrenPictures[3].displayUrl != undefined){
+             bot.sendDocument(msg.from.id, res.childrenPictures[3].displayUrl)
         }
-        if(post.contents[4] === undefined) {
+        if(res.childrenPictures[4] === undefined) {
             return msg.reply.text('4/10 Konten Ditemukan!')
-        } else if(post.contents[4].url != undefined){
-             bot.sendDocument(msg.from.id, post.contents[4].url)
+        } else if(res.childrenPictures[4].displayUrl != undefined){
+             bot.sendDocument(msg.from.id, res.childrenPictures[4].displayUrl)
         }
-        if(post.contents[5] === undefined) {
+        if(res.childrenPictures[5] === undefined) {
             return msg.reply.text('5/10 Konten Ditemukan!')
-        } else if(post.contents[5].url != undefined){
-             bot.sendDocument(msg.from.id, post.contents[5].url)
+        } else if(res.childrenPictures[5].displayUrl != undefined){
+             bot.sendDocument(msg.from.id, res.childrenPictures[5].displayUrl)
         }
-        if(post.contents[6] === undefined) {
+        if(res.childrenPictures[6] === undefined) {
             return msg.reply.text('6/10 Konten Ditemukan!')
-        } else if(post.contents[6].url != undefined){
-             bot.sendDocument(msg.from.id, post.contents[6].url)
+        } else if(res.childrenPictures[6].displayUrl != undefined){
+             bot.sendDocument(msg.from.id, res.childrenPictures[6].displayUrl)
         }
-        if(post.contents[7] === undefined) {
+        if(res.childrenPictures[7] === undefined) {
             return msg.reply.text('7/10 Konten Ditemukan!')
-        } else if(post.contents[7].url != undefined){
-             bot.sendDocument(msg.from.id, post.contents[7].url)
+        } else if(res.childrenPictures[7].displayUrl != undefined){
+             bot.sendDocument(msg.from.id, res.childrenPictures[7].displayUrl)
         }
-        if(post.contents[8] === undefined) {
+        if(res.childrenPictures[8] === undefined) {
             return msg.reply.text('8/10 Konten Ditemukan!')
-        } else if(post.contents[8].url != undefined){
-             bot.sendDocument(msg.from.id, post.contents[8].url)
+        } else if(res.childrenPictures[8].displayUrl != undefined){
+             bot.sendDocument(msg.from.id, res.childrenPictures[8].displayUrl)
         }
-        if(post.contents[9] === undefined) {
+        if(res.childrenPictures[9] === undefined) {
             return msg.reply.text('9/10 Konten Ditemukan!')
-        } else if(post.contents[9].url != undefined) {
-             bot.sendDocument(msg.from.id, post.contents[9].url)
+        } else if(res.childrenPictures[9].displayUrl != undefined) {
+             bot.sendDocument(msg.from.id, res.childrenPictures[9].displayUrl)
              msg.reply.text('10/10 Konten Ditemukan!')
         }
     

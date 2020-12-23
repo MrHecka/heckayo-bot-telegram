@@ -29,6 +29,7 @@
     "text-summarisation": "^2.0.0",
     "tinyurl": "^1.1.7",
     "translation-google": "^0.2.1",
+    "user-instagram": "^2.1.9",
     "video-url-link": "^0.1.5",
     "ytdl-core": "^4.2.1"
   },
