@@ -2,7 +2,6 @@
 console.log('igavatar.js aktif!')
 const TeleBot = require('telebot')
 const delay = require('delay')
-const userInstagram = require("user-instagram");
 const InstaClient = new ig()
 const bot = new TeleBot({
     token: process.env.TOKEN
