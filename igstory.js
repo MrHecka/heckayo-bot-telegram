@@ -18,6 +18,7 @@ bot.on(/^\/igstory ([\s\S]+)/, async (msg, args) => {
     let username = await args.match[1].split(' ')[1]
     let usernamefix = await username.replace(/@/g, '')
     let session = await process.env.sesiidig
+    await InstaClient.authBySessionId(session)
     
     if(nomor > 100) {
         return bot.sendMessage(msg.from.id, 'Kelebihan ngab...Maksimal = 100')
@@ -31,7 +32,7 @@ bot.on(/^\/igstory ([\s\S]+)/, async (msg, args) => {
         return bot.sendMessage(msg.from.id, 'Masukkin urutan nomor ig story nya ngab! [Contoh : /igstory 1 anone14_]')
     }
 
-    await InstaClient.authBySessionId(session)
+
     await bot.sendMessage(msg.from.id, `Sedang mengambil story urutan ke ${nomor} dari username => ${usernamefix}`)
 
     await InstaClient.getProfileStory(usernamefix)

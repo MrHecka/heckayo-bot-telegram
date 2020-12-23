@@ -17,6 +17,8 @@ bot.on(/^\/igtv (.+)$/, async (msg, args) => {
     if (!isUrl(arg)) {
          return await bot.sendMessage(msg.from.id, 'Masukkin link ngab...')
     }
+    let session = await process.env.sesiidig
+    await InstaClient.authBySessionId(session)
     let regexigtv = /(?:(?:(?:(?:https?)(?::\/\/))?(?:www\.))?)instagram\.com\/?(?<username>[a-zA-Z0-9_.]{1,30})?\/tv\/(?<code>[A-Za-z0-9_\-]+)\/?/
     let getid = arg.match(regexigtv)[2]
     await bot.sendMessage(msg.from.id, `Link ID Terdeteksi => ${getid}`)
