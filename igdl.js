@@ -12,21 +12,22 @@ module.exports = bot => {
 
 bot.on(/^\/igdl (.+)$/, async (msg, args) => {
 
-    let arg = args.match[1]
+    let arg = await args.match[1]
     if (!isUrl(arg)) {
         return bot.sendMessage(msg.from.id, 'Masukkin link ngab....')
     }
-    let regexpicture = /(?:(?:(?:(?:https?)(?::\/\/))?(?:www\.))?)instagram\.com\/?(?<username>[a-zA-Z0-9_.]{1,30})?\/p\/(?<code>[A-Za-z0-9_\-]+)\/?/
-    let getid = arg.match(regexpicture)[2]
+
+    let regexpicture = await /(?:(?:(?:(?:https?)(?::\/\/))?(?:www\.))?)instagram\.com\/?(?<username>[a-zA-Z0-9_.]{1,30})?\/p\/(?<code>[A-Za-z0-9_\-]+)\/?/
+    let getid = await arg.match(regexpicture)[2]
     await bot.sendMessage(msg.from.id, `Link ID Terdeteksi => ${getid}`)
 
-    InstaClient.getPost(getid)
+    await InstaClient.getPost(getid)
     .then(async(post) =>{
-    let username = post.author.username
-    let verified = post.author.verified ? '✅ Verified' : '❎ Tidak Verified'
-    let name = post.author.name
-    let caption = post.caption
-    let link = post.link
+    let username = await post.author.username
+    let verified = await post.author.verified ? '✅ Verified' : '❎ Tidak Verified'
+    let name = await post.author.name
+    let caption = await post.caption
+    let link = await post.link
    
     await bot.sendMessage(msg.from.id, `👤Berhasil Mendapatkan Konten👤\n\nUsername : ${username} ${verified}\nNama : ${name}\nDeskripsi : ${caption}\n\nLink Postingan : ${link}\n\nEnjoy😎👌`)
     async function igscraper() {
@@ -86,10 +87,6 @@ bot.on(/^\/igdl (.+)$/, async (msg, args) => {
     }
     
     igscraper()
-    .catch(async(err)=>{
-        return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)
-    })
-    
 
 
         }).catch(async(err) => {
