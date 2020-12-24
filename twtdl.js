@@ -32,12 +32,12 @@ await client.get(`statuses/show/${urlregex}`, async function(error, tweets, resp
         return await bot.sendMessage(msg.from.id, `Error | Video tidak ditemukan!`)
     } else if(!tweets.toString().includes(`${tweets.extended_entities.media[0].video_info}`)){
         return await bot.sendMessage(msg.from.id, `Error | Video tidak ditemukan!`)
-    } else if(!tweets.extended_entities.media[0].video_info.variants[0].toString().includes('video/mp4')){
+    } else if(tweets.extended_entities.media[0].video_info.variants[0].toString().includes('application/x-mpegURL')){
     let media = await tweets.extended_entities.media[0].video_info.variants[1].url
     await bot.sendMessage(msg.from.id, `ID Twitter Terdeteksi => ${urlregex}`)
     await bot.sendMessage(msg.from.id, `😎Berhasil Mendapatkan Data Tweet👌\n\nUsername : ${nama}\n\nDeskripsi : ${deskripsi}`)
     return await bot.sendVideo(msg.from.id, `${media}`)
-    } else if(tweets.extended_entities.media[0].video_info.variants[0].toString().includes('video/mp4')){
+    } else if(!tweets.extended_entities.media[0].video_info.variants[0].toString().includes('application/x-mpegURL')){
         let media = await tweets.extended_entities.media[0].video_info.variants[0].url
         await bot.sendMessage(msg.from.id, `ID Twitter Terdeteksi => ${urlregex}`)
         await bot.sendMessage(msg.from.id, `😎Berhasil Mendapatkan Data Tweet👌\n\nUsername : ${nama}\n\nDeskripsi : ${deskripsi}`)
