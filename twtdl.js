@@ -23,8 +23,12 @@ var client = await new Twitter({
 let regexid = await /https?:\/\/twitter.com\/[0-9-a-zA-Z_]{1,20}\/status\/([0-9]*)/;
 let urlregex = await arg.match(regexid)[1]
 
+const twittOpts = {
+    tweet_mode: "extended"
+  }
 
-await client.get(`statuses/show/${urlregex}`, async function(error, tweets, response) {
+
+await client.get(`statuses/show/${urlregex}`, twittOpts, async function(error, tweets, response) {
   if (!error) {
     let nama = await tweets.user.screen_name
     let deskripsi = await tweets.text
