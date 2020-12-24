@@ -29,7 +29,9 @@ await client.get(`statuses/show/${urlregex}`, async function(error, tweets, resp
     let nama = await tweets.user.screen_name
     let deskripsi = await tweets.text
     let media = await tweets.extended_entities.media[0].video_info.variants[0].url
-    
+    if(media === undefined) {
+        return bot.sendMessage(msg.from.id, `Error | Video tidak ditemukan! ${error}`)
+    }
     await bot.sendMessage(msg.from.id, `ID Twitter Terdeteksi => ${urlregex}`)
     await bot.sendMessage(msg.from.id, `😎Berhasil Mendapatkan Data Tweet👌\n\nUsername : ${nama}\n\nDeskripsi : ${deskripsi}`)
     return await bot.sendVideo(msg.from.id, `${media}`)
