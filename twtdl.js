@@ -24,29 +24,30 @@ let regexid = await /https?:\/\/twitter.com\/[0-9-a-zA-Z_]{1,20}\/status\/([0-9]
 let urlregex = await arg.match(regexid)[1]
 
 
-await client.get(`statuses/show/${urlregex}`, function(error, tweets, response) {
+await client.get(`statuses/show/${urlregex}`, async function(error, tweets, response) {
   if (!error) {
-    let nama = tweets.user.screen_name
-    let deskripsi = tweets.text
+    let nama = await tweets.user.screen_name
+    let deskripsi = await tweets.text
     if(!tweets.toString().includes(`${tweets.extended_entities}`)) {
-        return bot.sendMessage(msg.from.id, `Error | Video tidak ditemukan!`)
+        return await bot.sendMessage(msg.from.id, `Error | Video tidak ditemukan!`)
     } else if(!tweets.toString().includes(`${tweets.extended_entities.media[0].video_info}`)){
-        return bot.sendMessage(msg.from.id, `Error | Video tidak ditemukan!`)
+        return await bot.sendMessage(msg.from.id, `Error | Video tidak ditemukan!`)
     } 
-    let media = tweets.extended_entities.media[0].video_info.variants[0].url
-    bot.sendMessage(msg.from.id, `ID Twitter Terdeteksi => ${urlregex}`)
-    bot.sendMessage(msg.from.id, `😎Berhasil Mendapatkan Data Tweet👌\n\nUsername : ${nama}\n\nDeskripsi : ${deskripsi}`)
-    return bot.sendVideo(msg.from.id, `${media}`)
+    let media = await tweets.extended_entities.media[0].video_info.variants[0].url
+    await bot.sendMessage(msg.from.id, `ID Twitter Terdeteksi => ${urlregex}`)
+    await bot.sendMessage(msg.from.id, `😎Berhasil Mendapatkan Data Tweet👌\n\nUsername : ${nama}\n\nDeskripsi : ${deskripsi}`)
+    return await bot.sendVideo(msg.from.id, `${media}`)
   
     }else if (error){
-        return bot.sendMessage(msg.from.id, `ERROR | ${error}`)
+        return await bot.sendMessage(msg.from.id, `ERROR | ${error}`)
   }
 
+        }).catch(async(err)=> {
+            return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)
         })
     })
 
 }
-
 
 
 
