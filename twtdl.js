@@ -34,7 +34,7 @@ await client.get(`statuses/show/${urlregex}`, async function(error, tweets, resp
     await bot.sendMessage(msg.from.id, `😎Berhasil Mendapatkan Data Tweet👌\n\nUsername : ${nama}\n\nDeskripsi : ${deskripsi}`)
     return await bot.sendVideo(msg.from.id, `${media}`)
 
-  }else{
+  }else if (error){
     return await bot.sendMessage(msg.from.id, `ERROR | ${error}`)
   }
 
