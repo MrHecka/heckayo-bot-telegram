@@ -31,7 +31,7 @@ const twittOpts = {
 await client.get(`statuses/show/${urlregex}`, twittOpts, async function(error, tweets, response) {
   if (!error) {
     let nama = await tweets.user.screen_name
-    let deskripsi = await tweets.text
+    let deskripsi = await tweets.full_text
     if(!tweets.toString().includes(`${tweets.extended_entities}`)) {
         return await bot.sendMessage(msg.from.id, `Error | Video tidak ditemukan!`)
     } else if(!tweets.toString().includes(`${tweets.extended_entities.media[0].video_info}`)){
