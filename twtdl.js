@@ -30,7 +30,9 @@ await client.get(`statuses/show/${urlregex}`, async function(error, tweets, resp
     let deskripsi = await tweets.text
     if(!tweets.toString().includes(`${tweets.extended_entities}`)) {
         return await bot.sendMessage(msg.from.id, `Error | Video tidak ditemukan!`)
-    }else if (tweets.toString().includes(`${tweets.extended_entities}`)) {
+    } else if(!tweets.toString().includes(`${tweets.extended_entities.media[0].video_info}`)){
+        return await bot.sendMessage(msg.from.id, `Error | Video tidak ditemukan!`)
+    } else if (tweets.toString().includes(`${tweets.extended_entities}`)) {
         let media = await tweets.extended_entities.media[0].video_info.variants[0].url
     }
     
