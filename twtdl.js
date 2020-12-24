@@ -28,7 +28,7 @@ await client.get(`statuses/show/${urlregex}`, async function(error, tweets, resp
   if (!error) {
     let nama = await tweets.user.screen_name
     let deskripsi = await tweets.text
-    if(tweets.extended_entities.media[0].video_info.variants[0].url === undefined) {
+    if(tweets.extended_entities.media[0] === undefined) {
         return bot.sendMessage(msg.from.id, `Error | Video tidak ditemukan! ${error}`)
     } else if(tweets.extended_entities.media[0].video_info.variants[0].url != undefined) {
     let media = await tweets.extended_entities.media[0].video_info.variants[0].url
