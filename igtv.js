@@ -32,7 +32,7 @@ bot.on(/^\/igtv (.+)$/, async (msg, args) => {
     let igtv = post.contents[0].url
 
     TinyURL.shorten(igtv, async(urligtv) => {
-    return await bot.sendMessage(msg.from.id, `👤Berhasil Mendapatkan Konten👤\n\nUsername : ${username} ${verified}\nNama : ${name}\nDeskripsi : ${caption}\n\nLink Postingan : ${link}\n\nLink Download : ${urligtv}\n\nEnjoy😎👌`)
+    return await bot.sendMessage(msg.from.id, `👤Berhasil Mendapatkan Konten👤\n\nUsername : ${username} ${verified}\n\nNama : ${name}\n\nDeskripsi : ${caption}\n\nLink Postingan : ${link}\n\nLink Download : ${urligtv}\n\nEnjoy😎👌`)
     
 
     })

@@ -31,7 +31,7 @@ bot.on(/^\/igdl (.+)$/, async (msg, args) => {
     let caption = await post.caption
     let link = await post.link
    
-    await bot.sendMessage(msg.from.id, `👤Berhasil Mendapatkan Konten👤\n\nUsername : ${username} ${verified}\nNama : ${name}\nDeskripsi : ${caption}\n\nLink Postingan : ${link}\n\nEnjoy😎👌`)
+    await bot.sendMessage(msg.from.id, `👤Berhasil Mendapatkan Konten👤\n\nUsername : ${username} ${verified}\n\nNama : ${name}\n\nDeskripsi : ${caption}\n\nLink Postingan : ${link}\n\nEnjoy😎👌`)
     async function igscraper() {
 
         if(post.contents[0] === undefined) {

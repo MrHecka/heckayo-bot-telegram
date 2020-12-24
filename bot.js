@@ -15,7 +15,7 @@ bot.on(['/start', '/halo'], async (msg) => {
     bot.sendMessage(msg.from.id, `Halo Selamat Datang, ${msg.from.username}! ^_^`);
     await delay (500)
     return bot.sendMessage (
-    msg.from.id, 'Halo ini adalah BOT Heckayo Versi Telegram😄!\n\n____________\n\nGunakan perintah /menu untuk melihat semua fitur yang ada di Bot Heckayo, dan gunakan perintah /infomenu untuk melihat informasi dan semua contoh perintah fitur yang ada di Bot Heckayo, terima kasih😉\n\n____________\n\n🤖VERSI BOT HECKAYO : v2.1🤖\n\nAdded /nulis3✅\nUpdated /animedl3✅\nAdded /cewecans✅\nAdded /igdl✅\nAdded /igtv✅\nAdded /igstory✅\nFixed /ytmp3✅\nAdded /igavatar✅')
+    msg.from.id, 'Halo ini adalah BOT Heckayo Versi Telegram😄!\n\n____________\n\nGunakan perintah /menu untuk melihat semua fitur yang ada di Bot Heckayo, dan gunakan perintah /infomenu untuk melihat informasi dan semua contoh perintah fitur yang ada di Bot Heckayo, terima kasih😉\n\n____________\n\n🤖VERSI BOT HECKAYO : v2.2🤖\n\nAdded /nulis3✅\nUpdated /animedl3✅\nAdded /cewecans✅\nAdded /igdl✅\nAdded /igtv✅\nAdded /igstory✅\nFixed /ytmp3✅\nAdded /igavatar✅\nFixed /twtdl✅')
 })
 
 bot.on(['/menu'], async (msg) => {
