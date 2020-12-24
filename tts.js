@@ -8,6 +8,7 @@ const bot = new TeleBot({
 module.exports = bot => {
 bot.on(/^\/tts ([\s\S]+)/, async (msg, args) => {
     const arg = args.match[1]
+    await bot.sendMessage(msg.from.id, 'Sabar, mbak gugel nya lagi baca teks kamu...')
 
     googleTTS
   .getAudioBase64(arg, {
@@ -25,6 +26,7 @@ bot.on(/^\/tts ([\s\S]+)/, async (msg, args) => {
     };
 
     await bot.sendAudio(msg.from.id, Buffer.from(tts, 'base64'), fileOpts);
+    return await bot.sendMessage(msg.from.id, 'Sukses😎👌, Thanks to mbak gugel!')
 
   })
   .catch(async(err) => {
