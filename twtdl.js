@@ -44,8 +44,6 @@ await client.get(`statuses/show/${urlregex}`, async function(error, tweets, resp
     return await bot.sendMessage(msg.from.id, `ERROR | ${error}`)
   }
 
-    }).catch(async(err)=> {
-        return await bot.sendMessage(msg.from.id, `ERROR NGAB | ${err}`)
     })
 })
 
