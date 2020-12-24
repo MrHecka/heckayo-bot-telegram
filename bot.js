@@ -15,13 +15,13 @@ bot.on(['/start', '/halo'], async (msg) => {
     bot.sendMessage(msg.from.id, `Halo Selamat Datang, ${msg.from.username}! ^_^`);
     await delay (500)
     return bot.sendMessage (
-    msg.from.id, 'Halo ini adalah BOT Heckayo Versi Telegram😄!\n\n____________\n\nGunakan perintah /menu untuk melihat semua fitur yang ada di Bot Heckayo, dan gunakan perintah /infomenu untuk melihat informasi dan semua contoh perintah fitur yang ada di Bot Heckayo, terima kasih😉\n\n____________\n\n🤖VERSI BOT HECKAYO : v2.2🤖\n\nAdded /nulis3✅\nUpdated /animedl3✅\nAdded /cewecans✅\nAdded /igdl✅\nAdded /igtv✅\nAdded /igstory✅\nFixed /ytmp3✅\nAdded /igavatar✅\nFixed /twtdl✅')
+    msg.from.id, 'Halo ini adalah BOT Heckayo Versi Telegram😄!\n\n____________\n\nGunakan perintah /menu untuk melihat semua fitur yang ada di Bot Heckayo, dan gunakan perintah /infomenu untuk melihat informasi dan semua contoh perintah fitur yang ada di Bot Heckayo, terima kasih😉\n\n____________\n\n🤖VERSI BOT HECKAYO : v2.2🤖\n\nAdded /nulis3✅\nUpdated /animedl3✅\nAdded /cewecans✅\nAdded /igdl✅\nAdded /igtv✅\nAdded /igstory✅\nFixed /ytmp3✅\nAdded /igavatar✅\nFixed /twtdl✅\n Added /tts✅')
 })
 
 bot.on(['/menu'], async (msg) => {
     return bot.sendMessage
 (msg.from.id, `_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\nBOT LINK : https://telegram.me/HeckayoBot\n
-=====[DAFTAR MENU]=====\n> /nulis [teks]\n> /nulis2 [teks]\n> /nulis3 [teks]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /animedl2 [nama anime]\n> /animedl3 [nama anime]\n> /filmtrend\n> /filmdetail [angka 1-20]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /qrcode [teks]\n> /pasangan [namamu] [nama pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]\n> /rangkum [teks]\n> /loli\n> /neko\n> /waifu\n> /cewecans\n> /wallpaper\n> /slots\n========================\n\n===[Sosmed Downloader]===\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /twtdl [link twitter]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /igdl [link instagram]\n> /igtv [link instagram tv]\n> /igstory [angka] [username ig]\n> /igavatar [username ig]\n========================\n\n
+=====[DAFTAR MENU]=====\n> /nulis [teks]\n> /nulis2 [teks]\n> /nulis3 [teks]\n> /anime [nama anime]\n> /animedl [nama anime]\n> /animedl2 [nama anime]\n> /animedl3 [nama anime]\n> /filmtrend\n> /filmdetail [angka 1-20]\n> /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /qrcode [teks]\n> /tts [teks]\n> /pasangan [namamu] [nama pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]\n> /rangkum [teks]\n> /loli\n> /neko\n> /waifu\n> /cewecans\n> /wallpaper\n> /slots\n========================\n\n===[Sosmed Downloader]===\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /twtdl [link twitter]\n> /tiktokdl [link tiktok]\n> /fbdl [link video facebook]\n> /igdl [link instagram]\n> /igtv [link instagram tv]\n> /igstory [angka] [username ig]\n> /igavatar [username ig]\n========================\n\n
 =====[CATATAN]=====\n> Tolong bot nya jangan di spam😣\n> Cintai bot nya seperti kamu mencintai dia🤗\n> Semua perintah yang membutuhkan teks tidak perlu menggunakan tanda []👈\n> Masih bingung dengan fitur heckayo🤨? gunakan perintah /infomenu\n> Bot masih dalam tahap pengembangan🔧\n> Terima kasih sudah menggunakan Bot Heckayo😍\n===================\n\n
 > Beritahu pembuat bot jika saya mati atau jika kamu menemukan bug dan perintah yang malfungsi :\n> https://t.me/MrHecka\n\n
 > Support bot ini dengan cara donasi ke :\n> https://saweria.co/heckayo\n> https://paypal.me/mrplo/\n\n
@@ -38,6 +38,7 @@ return bot.sendMessage
 /anime = Untuk mencari info seputar anime, jumlah episode, sinopsis, rating, dan lainnya \n(Contoh Perintah : /anime death note)\n\n
 /cekresi = Untuk mengecek resi atau tracking paket lewat kurir dan resi yang di tulis \n(Contoh Perintah : /cekresi jne 4105xxxxxxxx320)\n\n
 /brainly = Untuk mencari jawaban dari brainly \n(Contoh Perintah : /brainly kenapa bumi bulat)\n\n
+/tts = Untuk merubah teks menjadi audio, suara by mbak mbak gugel :v \n(Contoh Perintah : /tts anjay mabar)\n\n
 /lirik = Untuk mencari lirik musik \n(Contoh Perintah : /lirik vierra seandainya)\n\n
 /loli = Untuk mencari gambar loli secara random atau acak \n(Contoh Perintah : /loli)\n\n
 /neko = Untuk mencari gambar neko atau kucing kawai secara random atau acak \n(Contoh Perintah : /neko)\n\n
@@ -53,6 +54,7 @@ return bot.sendMessage
 /filmdetail = Untuk melihat detail filmtrend lebih lengkap \n(Contoh Perintah : /filmdetail 1)\n\n
 /slots = Untuk bermain game slots casino \n(Contoh Perintah : /slots)\n\n
 /cewecans = Untuk gacha gambar ciwi ciwi cantik :v \n(Contoh Perintah : /cewecans)\n\n
+
 
 ===[Sosmed Downloader]===\n\n
 /ytmp4 = Untuk mendownload video dari youtube berformat mp4 \n(Contoh Perintah : /ytmp4 https://youtu.be/dQw4w9WgXcQ)\n\n
@@ -108,6 +110,7 @@ require('./igdl.js')(bot)
 require('./igtv.js')(bot)
 require('./igstory.js')(bot)
 require('./igavatar.js')(bot)
+require('./tts.js')(bot)
 
 // require disini!
 

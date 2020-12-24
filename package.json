@@ -14,6 +14,7 @@
     "fbdl-core": "^1.0.2",
     "fs": "0.0.1-security",
     "genius-lyrics": "^4.1.4",
+    "google-tts-api": "^2.0.0",
     "http": "0.0.1-security",
     "is-url": "^1.2.4",
     "kitsu": "^9.1.17",
