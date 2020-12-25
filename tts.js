@@ -11,7 +11,7 @@ bot.on(/^\/tts ([\s\S]+)/, async (msg, args) => {
     await bot.sendMessage(msg.from.id, 'Sabar, mbak gugel nya lagi baca teks kamu...')
 
     googleTTS
-  .getAudioBase64(arg, {
+  .getAllAudioBase64(arg, {
     lang: 'id',
     slow: false,
     host: 'https://translate.google.com',
