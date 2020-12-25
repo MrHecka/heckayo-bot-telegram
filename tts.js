@@ -21,11 +21,11 @@ bot.on(/^\/tts ([\s\S]+)/, async (msg, args) => {
 
     const tts = res
     const fileOpts = {
-    filename: 'tts',
+    fileName: 'tts.mp3',
     contentType: 'audio/mp3',
     };
 
-    await bot.sendAudio(msg.from.id, Buffer.from(tts, 'base64'), fileOpts);
+    await bot.sendAudio(msg.from.id, Buffer.from(tts, 'base64'), fileOpts)
     return await bot.sendMessage(msg.from.id, 'Sukses😎👌, Thanks to mbak gugel!')
 
   })

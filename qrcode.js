@@ -11,7 +11,7 @@ bot.on(/^\/qrcode ([\s\S]+)/, async (msg, args) => {
     QRCode.toDataURL(arg, async function (err, url) {
         const file = url
         const fileOpts = {
-        filename: 'image',
+        fileName: 'qrcode.jpg',
         contentType: 'image/jpg',
         };
         await bot.sendPhoto(msg.from.id, Buffer.from(file.substr(22), 'base64'), fileOpts);

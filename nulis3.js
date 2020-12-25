@@ -31,7 +31,7 @@ module.exports = bot => {
         bot.sendMessage(msg.from.id, 'Sebentar ya ngab...')
         const file = body.result
         const fileOpts = {
-        filename: 'image',
+        fileName: 'nulis3.jpg',
         contentType: 'image/jpg',
         };
         await delay(2000)

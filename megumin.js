@@ -1,4 +1,4 @@
-console.log('loli.js aktif!');
+console.log('megumin.js aktif!');
 
 const TeleBot = require('telebot');
 const delay = require('delay');
@@ -9,13 +9,13 @@ const bot = new TeleBot({
 })
 
 module.exports = bot => {
-    bot.on(['/loli'], async (msg, args) => {
-    const link = await 'https://arugaz.herokuapp.com/api/randomloli'
-    await bot.sendMessage(msg.from.id, 'Sedang mencari dan mengarungi loli....')
+    bot.on(['/megumin'], async (msg, args) => {
+    const link = await 'https://waifu.pics/api/sfw/megumin'
+    await bot.sendMessage(msg.from.id, 'Sabar ngab...')
     await axios.get(link)
     .then(async (res) => {
-        let randomloli = await `${res.data.result}`
-        await bot.sendPhoto(msg.from.id, `${randomloli}`)
+        let randommegumin = await `${res.data.url}`
+        await bot.sendPhoto(msg.from.id, `${randommegumin}`)
         return await bot.sendMessage(msg.from.id, 'KAWAIIIIII😍😍')
 
     })

@@ -4,7 +4,7 @@ const TeleBot = require('telebot');
 const delay = require('delay');
 const fbdl = require('fbdl-core')
 const TinyURL = require('tinyurl')
-const links = 'https://arugaz.herokuapp.com/api/fb?url='
+
 
 const bot = new TeleBot({
     token: process.env.TOKEN
