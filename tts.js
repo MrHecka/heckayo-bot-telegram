@@ -10,8 +10,12 @@ bot.on(/^\/tts ([\s\S]+)/, async (msg, args) => {
     const arg = args.match[1]
     await bot.sendMessage(msg.from.id, 'Sabar, mbak gugel nya lagi baca teks kamu...')
 
+    if(arg.length > 200) {
+      return bot.sendMessage(msg.from.id, 'ERROR | Batas maksimal 200 karakter!')
+    }
+
     googleTTS
-  .getAllAudioBase64(arg, {
+  .getAudioBase64(arg, {
     lang: 'id',
     slow: false,
     host: 'https://translate.google.com',
