@@ -8,12 +8,6 @@ const bot = new TeleBot({
     token: process.env.TOKEN
 })
 
-let url = `https://api.telegram.org/bot` + process.env.TOKEN + `/sendMessage?chat_id=-1001256421808&text=`
-
-module.exports = bot => {
-    bot.on(/^\/saran ([\s\S]+)/, async (msg, args) => {
-    let arg = args.match[1]
-
 // TANGGAL
 
 const options = {
@@ -29,25 +23,27 @@ const options = {
  
 // TANGGAL
 
+let idgrup = '-1001256421808'
+
+module.exports = bot => {
+    bot.on(/^\/saran ([\s\S]+)/, async (msg, args) => {
+    let pesan = `=Saran=\n\nDari :\nNama Depan/Belakang : ${msg.from.first_name} ${msg.from.last_name}\nUsername : ${msg.from.username}\nID : ${msg.from.id}\nDikirim tanggal : ${dateInNewTimezone}\n\nPesan :\n` + args.match[1]
+
 if (cooldown.has(msg.from.id)) {
 
     return bot.sendMessage(msg.from.id, `Cooldown 1 jam ngab...Tunggu 1 jam lagi baru bisa kirim saran baru🙏`)
 
-    } else {
-
-        axios
-        .post(url + `=Saran=\n\nDari : ${msg.from.username}\nID : ${msg.from.id}\nDikirim tanggal : ${dateInNewTimezone}\n\nPesan :\n` + arg)
-        .then(async(res)=>{
-            await msg.reply.text(`>> Berhasil mengirim saran ke dev (MrHecka)✍️👌\nTerima kasih banyak sudah mengirim saran🙏`)
-        }).catch(async(err)=> {
-            return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)
-        })
+    } else {    
+        
+        await bot.sendMessage(idgrup, pesan)
+        await msg.reply.text(`>> Berhasil mengirim saran ke dev (MrHecka)✍️👌\nTerima kasih banyak sudah mengirim saran🙏`)
 
         cooldown.add(msg.from.id);
         setTimeout(() => {
           cooldown.delete(msg.from.id);
         }, 3600000);
-    }
+        
+        }
         
     })
 

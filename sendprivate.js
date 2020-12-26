@@ -16,12 +16,7 @@ module.exports = bot => {
             let id = args.match[1].split(' ')[0]
             let argz = args.match[1]
             let pesan = argz.slice(id.length + 1)
-            let url = `https://api.telegram.org/bot` + process.env.TOKEN + `/sendMessage?chat_id=${id}&text=${pesan}`
-            axios
-            .post(url)
-            .then(async(res)=>{
-                await msg.reply.text(`>> Berhasil Mengirim Pesan Ke ID > ${id}\nPesan :\n${pesan}`)
-            }).catch(async(err)=> {
+            await bot.sendMessage(id, pesan).catch(async(err) => {
                 return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)
             })
             

@@ -11,7 +11,7 @@ const bot = new TeleBot({
 
 module.exports = bot => {
 
-    bot.on(['/monitorjsonlogsheckayo00101001'], async (msg, args) => {
+    bot.on(['/showmonitorlogs'], async (msg, args) => {
         if (msg.from.id.toString().includes(dev)) {
            let readlogs = fs.readFileSync('userlogs.txt', {encoding:'utf-8'})
            if (readlogs.length < 4096) {

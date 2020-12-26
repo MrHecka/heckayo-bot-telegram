@@ -29,8 +29,11 @@ const options = {
  
 // TANGGAL
 
-logger.write(`[${dateInNewTimezone}] - [${msg.from.username} | ${msg.from.id}] > ${msg.text}\n`)
-
+if(msg.from.username != undefined) {
+  logger.write(`[${dateInNewTimezone}] - [${msg.from.username} | ${msg.from.id}] > ${msg.text}\n`)
+} else if(msg.from.username === undefined) {
+  logger.write(`[${dateInNewTimezone}] - [${msg.from.first_name} ${msg.from.last_name} | ${msg.from.id}] > ${msg.text}\n`)
+}
 
 
     })
