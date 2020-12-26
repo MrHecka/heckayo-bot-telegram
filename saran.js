@@ -8,7 +8,7 @@ const bot = new TeleBot({
     token: process.env.TOKEN
 })
 
-let url = 'https://api.telegram.org/bot1432682318:AAFtzU7mQiVaTdbbFHJw1sO4OlxnkkRpnUU/sendMessage?chat_id=854756142&text='
+let url = `https://api.telegram.org/bot` + process.env.TOKEN + `/sendMessage?chat_id=-498412199&text=`
 
 module.exports = bot => {
     bot.on(/^\/saran ([\s\S]+)/, async (msg, args) => {
