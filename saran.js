@@ -38,7 +38,7 @@ if (cooldown.has(msg.from.id)) {
         axios
         .post(url + `=Saran=\n\nDari : ${msg.from.username}\nID : ${msg.from.id}\nDikirim tanggal : ${dateInNewTimezone}\n\nPesan :\n` + arg)
         .then(async(res)=>{
-            await msg.reply.text(`>> Berhasil mengirim saran ke dev (MrHecka)✍️👌`)
+            await msg.reply.text(`>> Berhasil mengirim saran ke dev (MrHecka)✍️👌\nTerima kasih banyak sudah mengirim saran🙏`)
         }).catch(async(err)=> {
             return await bot.sendMessage(msg.from.id, `ERROR | ${err}`)
         })
