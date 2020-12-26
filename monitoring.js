@@ -2,14 +2,17 @@ console.log('monitoring.js AKTIF!')
 
 const TeleBot = require('telebot')
 const delay = require('delay')
-const fs = require('fs')
-var o = {"userlist":[]}
+var fs = require('fs')
+var logger = fs.createWriteStream('userlogs.txt', {
+  flags: 'a'
+})
+
 
 const bot = new TeleBot({
     token: process.env.TOKEN
 })
 module.exports = bot => {
-    bot.on('text', async (msg, args) => {
+    bot.on('text', async (msg) => {
 
 let read = await fs.readFileSync('userlist.json', {encoding:'utf-8'})
 
@@ -32,18 +35,8 @@ const options = {
  
 // TANGGAL
 
-    let unik = Math.floor(Math.random() * 1000);
-    var obj = {
-    kodeunik: unik,
-    nama: msg.from.username,
-    id: msg.from.id,
-    tgl: dateInNewTimezone
-    };
+logger.write(`[${dateInNewTimezone}] - [${msg.from.username} | ${msg.from.id}] > ${msg}\n`)
 
-    o.userlist.push(obj)
-
-    let data = JSON.stringify(o)
-    fs.writeFileSync('userlist.json', data)
 
 
     })
