@@ -14,12 +14,6 @@ const bot = new TeleBot({
 module.exports = bot => {
     bot.on('text', async (msg) => {
 
-let read = await fs.readFileSync('userlist.json', {encoding:'utf-8'})
-
-if(read.toString().includes(`${msg.from.id}`)) {
-    return
-}
-
 // TANGGAL
 
 const options = {
@@ -35,7 +29,7 @@ const options = {
  
 // TANGGAL
 
-logger.write(`[${dateInNewTimezone}] - [${msg.from.username} | ${msg.from.id}] > ${msg}\n`)
+logger.write(`[${dateInNewTimezone}] - [${msg.from.username} | ${msg.from.id}] > ${msg.text}\n`)
 
 
 

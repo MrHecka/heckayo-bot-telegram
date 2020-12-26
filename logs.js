@@ -13,8 +13,12 @@ module.exports = bot => {
 
     bot.on(['/monitorjsonlogsheckayo00101001'], async (msg, args) => {
         if (msg.from.id.toString().includes(dev)) {
-           let readlogs = fs.readFileSync('userlist.json', {encoding:'utf-8'})
+           let readlogs = fs.readFileSync('userlogs.txt', {encoding:'utf-8'})
+           if (readlogs.length < 4096) {
            return await bot.sendMessage(msg.from.id, `${readlogs}`)
+           } else {
+               return await bot.sendDocument(msg.from.id, './userlogs.txt')
+           }
         } else {
             return bot.sendMessage(msg.from.id, `Maaf kamu bukan dev, aku tidak mengenal mu 🙁`)
         }
