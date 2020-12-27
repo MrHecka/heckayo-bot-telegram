@@ -19,7 +19,6 @@ bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
       const pipe = video.pipe(
         fs.createWriteStream(video_file),
       );
-          if (pipe._writableState.finished === true) {
             if (pipe.bytesWritten < 52428800) {
           msg.reply.text("Sedang mengirim...");
           msg.reply.video(video_file).then(()=>{
@@ -31,14 +30,10 @@ bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
           msg.reply.text('Error | Size video melebihi 50mb')
           fs.unlinkSync(video_file);
         }
-      } else {
-        msg.reply.text('Gagal!')
-        fs.unlinkSync(video_file);
-      }
-        
     }
   })
 }
+
 
 
 
