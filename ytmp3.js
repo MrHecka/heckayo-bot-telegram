@@ -11,20 +11,20 @@ const bot = new TeleBot({
 module.exports = bot => {
 
 bot.on(/^\/ytmp3 (.+)$/, async (msg, props) => {
-    const url = props.match[1];
+    const url = await props.match[1];
     if(ytdl.validateURL(url)){
-      let audio_file = ytdl.getURLVideoID(url) + ".mp3";
-      msg.reply.text("Sedang mendownload...sabar ngab...");
-      ytdl(url, {quality: "highestaudio", filter: "audioonly"})
-        .pipe(fs.createWriteStream(audio_file).on('finish',()=>{
-          msg.reply.text("Sedang mengirim...");
-          msg.reply.audio(audio_file).then(()=>{
-            fs.unlinkSync(audio_file);
-            msg.reply.text("Berhasil😎👌")
+      let audio_file = await './ytdl/' + ytdl.getURLVideoID(url) + '.mp4';
+      await msg.reply.text("Sedang mendownload...sabar ngab...");
+      await ytdl(url, {quality: "highestaudio", filter: "audioonly"})
+        .pipe(fs.createWriteStream(audio_file).on('finish', async ()=>{
+          await msg.reply.text("Sedang mengirim...");
+          await msg.reply.audio(audio_file).then(async ()=>{
+            await fs.unlinkSync(audio_file);
+            await msg.reply.text("Berhasil😎👌")
           });
         }));
     }else{
-      msg.reply.text("Error | Video tidak ditemukan...");
+      await msg.reply.text("Error | Video tidak ditemukan...");
     }
   })
 }
