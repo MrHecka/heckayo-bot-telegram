@@ -1,49 +1,45 @@
-console.log('nulis3.js aktif!')
+console.log('nulis4.js aktif!')
 
+const { spawn, exec } = require('child_process')
+const fs = require('fs')
+const { stdout } = require('process')
 const TeleBot = require('telebot')
-const delay = require('delay')
-const needle = require('needle')
-const _ = require('lodash')
-const { isEmpty } = require('lodash')
-
 
 const bot = new TeleBot({
     token: process.env.TOKEN
 
 })
 
-
 module.exports = bot => {
     bot.on(/^\/nulis3 ([\s\S]+)/, async (msg, args) => {
-    let arg = args.match[1]
-
-    let url = 'https://freerestapi-backend-py.herokuapp.com/nulis?text='
-    needle(url + arg, async (err, resp, body) => {
-        if (_.isEmpty(body) === true) {
-        return bot.sendMessage(msg.chat.id, 'Gagal!, coba lagi pelan-pelan...jangan lupa berdoa juga!')
-        }
-        if (_.isEmpty(body.result) === true) { 
-        return bot.sendMessage(msg.chat.id, 'Gagal!, Masukkan teks terlebih dahulu!')
-        }
-        bot.sendMessage(msg.from.id, 'Sebentar ya ngab...')
-        const file = body.result
-        const fileOpts = {
-        fileName: 'nulis3.jpg',
-        contentType: 'image/jpg',
-        };
-        await delay(200)
-        await bot.sendPhoto(msg.from.id, Buffer.from(file.substr(23), 'base64'), fileOpts);
-        await delay(200)
-        return await bot.sendMessage(msg.from.id, 'Sukses!😎')
-
+    let tulisan = await args.match[1]
+    await bot.sendMessage(msg.from.id, `Sabar ngab lagi nulis....`)
+    const splitText = await tulisan.replace(/(\S+\s*){1,10}/g, '$&\n')
+    const fixHeight = await splitText.split('\n').slice(0, 31).join('\n')
+    await spawn('convert', [
+        './nulis/sebelum.jpg',
+        '-font',
+        './nulis/Indie-Flower.ttf',
+        '-size',
+        '960x1280',
+        '-pointsize',
+        '22',
+        '-interline-spacing',
+        '2',
+        '-annotate',
+        '+140+153',
+        fixHeight,
+        `./nulis/setelah${msg.from.id}.jpg`
+    ])
+    .on('error', async () => bot.sendMessage(msg.from.id, 'Error ngab, tolong hubungi dev @MrHecka!'))
+    .on('exit', async () => {
+    await bot.sendPhoto(msg.from.id, `./nulis/setelah${msg.from.id}.jpg`, { caption: 'Sukses😎✍️' })
+    return await fs.unlinkSync(`./nulis/setelah${msg.from.id}.jpg`)
         })
+
+    })
     
-    }) 
-
-
-}
-
-
+} 
 
 
 

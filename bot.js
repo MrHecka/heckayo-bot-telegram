@@ -17,7 +17,7 @@ bot.on(['/start'], async (msg) => {
 
 await bot.sendPhoto(msg.from.id, './gambar/Welcome.png', { caption: `😎Halo Selamat Datang, ${msg.from.username || msg.from.first_name}! 👋\n____________\nHalo ini adalah BOT Heckayo Versi Telegram😄!\n____________\n
 Gunakan perintah /menu untuk melihat semua fitur yang ada di Bot Heckayo, gunakan juga fitur /about untuk melihat tentang Bot Heckayo, dan gunakan perintah /infomenu untuk melihat informasi dan semua contoh perintah fitur yang ada di Bot Heckayo, terima kasih😉\n____________
-\n🤖VERSI BOT HECKAYO : v2.4🤖\n\nFixed /ytmp3✅\nAdded /igavatar✅\nFixed /twtdl✅\nAdded /tts✅\nAdded /saran✅\nAdded Keyboard✅\nRemake start, menu✅\nAdded /about✅\nAdded /nulis4✅`
+\n🤖VERSI BOT HECKAYO : v2.4🤖\n\nFixed /ytmp3✅\nAdded /igavatar✅\nFixed /twtdl✅\nAdded /tts✅\nAdded /saran✅\nAdded Keyboard✅\nRemake start, menu✅\nAdded /about✅\nAdded /nulis3✅`
 })
 return await bot.sendMessage(msg.from.id, 'Gunakan /hide untuk menyembunyikan keyboard!', {replyMarkup})
 })
@@ -39,7 +39,7 @@ bot.on('/show', msg => {
 bot.on(['/menu'], async (msg) => {
     return bot.sendMessage
 (msg.from.id, `Created By : @MrHecka\nLink Bot : https://telegram.me/HeckayoBot\n_______________\n\n🤖LIST FITUR BOT HECKAYO🤖!\n
-=====[DAFTAR MENU]=====\n> /nulis [teks]\n> /nulis2 [teks]\n> /nulis3 [teks]\n> /nulis4\n> /anime [nama anime]
+=====[DAFTAR MENU]=====\n> /nulis [teks]\n> /nulis2 [teks]\n> /nulis3 [teks]\n> /anime [nama anime]
 > /animedl [nama anime]\n> /animedl2 [nama anime]\n> /filmtrend\n> /filmdetail [angka 1-20]
 > /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /saran [teks]
 > /qrcode [teks]\n> /tts [teks]\n> /pasangan [namamu] [pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]
@@ -58,7 +58,7 @@ bot.on(['/infomenu'], async (msg) => {
 
 return bot.sendMessage
 (msg.from.id, `_______________\n\n🤖INFO MENU🤖!\n\n===[Info Menu Fitur Heckayo]===\n
-/nulis = Untuk menulis tanpa membutuhkan pulpen atau kertas \n(Contoh Perintah : /nulis Halo nama saya ucup < sama dengan /nulis2 /nulis3 /nulis4)\n
+/nulis = Untuk menulis tanpa membutuhkan pulpen atau kertas \n(Contoh Perintah : /nulis Halo nama saya ucup < sama dengan /nulis2 dan /nulis3)\n
 /anime = Untuk mencari info seputar anime, jumlah episode, sinopsis, rating, dan lainnya \n(Contoh Perintah : /anime death note)\n
 /cekresi = Untuk mengecek resi atau tracking paket lewat kurir dan resi yang di tulis \n(Contoh Perintah : /cekresi jne 4105xxxxxxxx320)\n
 /brainly = Untuk mencari jawaban dari brainly \n(Contoh Perintah : /brainly kenapa bumi bulat)\n
@@ -132,7 +132,6 @@ return bot.sendMessage
 require('./nulis.js')(bot)
 require('./nulis2.js')(bot)
 require('./nulis3.js')(bot)
-require('./nulis4.js')(bot)
 require('./megumin.js')(bot)
 require('./neko.js')(bot)
 require('./waifu.js')(bot)
