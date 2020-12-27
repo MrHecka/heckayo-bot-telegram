@@ -14,15 +14,10 @@ const bot = new TeleBot({
 
 
 
-
 module.exports = bot => {
     bot.on(/^\/nulis ([\s\S]+)/, async (msg, args) => {
     let arg = args.match[1]
-    if(arg.length < 10) {
-        return bot.sendMessage(msg.chat.id, 'Masukkan teks minimal 10 huruf!')
-    }
-
-
+    
     let url = 'http://salism3.pythonanywhere.com/write?text='
     needle(url + arg, async (err, resp, body) => {
         if (_.isEmpty(body) === true) {
@@ -32,7 +27,7 @@ module.exports = bot => {
         return bot.sendMessage(msg.chat.id, 'Gagal!, Masukkan teks terlebih dahulu!')
         }
         await bot.sendMessage(msg.from.id, 'Sebentar ya ngab...')
-        await delay(2000)
+        await delay(200)
         await bot.sendPhoto(msg.from.id, `${body.images}`)
         await delay(200)
         return await bot.sendMessage(msg.from.id, 'Sukses!😎')
