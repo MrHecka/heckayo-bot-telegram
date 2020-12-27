@@ -14,6 +14,8 @@ bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
     const url = props.match[1];
     if(ytdl.validateURL(url)){
       let video_file = ytdl.getURLVideoID(url) + '.mp4';
+      if (pipe._writableState.finished === true) {
+      if (pipe.bytesWritten < 52428800) {
       msg.reply.text("Sedang mendownload...sabar ngab...");
       ytdl(url, { quality: "lowestvideo", format: 'mp4', filter: 'audioandvideo' })
         .pipe(fs.createWriteStream(video_file).on('finish',()=>{
@@ -23,6 +25,12 @@ bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
             msg.reply.text("Berhasil😎👌")
           });
         }));
+      } else {
+        msg.reply.text('Error | File lebih dari 50mb!')
+      }
+    } else {
+      msg.reply.text('Error | Unduhan gagal!')
+    }
     }else{
       msg.reply.text("Error | Video tidak ditemukan...");
     }
