@@ -24,13 +24,15 @@ return await bot.sendMessage(msg.from.id, 'Gunakan /hide untuk menyembunyikan ke
 
 bot.on('/hide', msg => {
     return bot.sendMessage(
-        msg.from.id, 'Gunakan /show untuk menampilkan keyboard!', {replyMarkup: 'hide'}
-    )
+        msg.from.id, 'Gunakan /show untuk menampilkan keyboard!', {replyMarkup: 'hide'})
 })
 
 bot.on('/show', msg => {
-    return bot.sendMessage(
-        msg.from.id, 'Gunakan /hide untuk menyembunyikan keyboard!', {replyMarkup})
+    let replyMarkup = bot.keyboard([
+        ['/menu ✏️🗒', '/infomenu 🗒🔍',
+        '/about 🤖❗️'],
+    ], {resize: true});
+    return bot.sendMessage(msg.from.id, 'Gunakan /hide untuk menyembunyikan keyboard!', {replyMarkup})
 })
 
 
