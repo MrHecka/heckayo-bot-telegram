@@ -1,0 +1,12 @@
+[20-12-27 22:35:01 GMT+7] - [MrHecka | 854756142] > a
+[20-12-27 22:35:02 GMT+7] - [MrHecka | 854756142] > /hide
+[20-12-27 22:35:09 GMT+7] - [MrHecka | 854756142] > /ytmp3 https://www.youtube.com/watch?v=pA1sJ_8WNT0&list=LL&index=5
+[20-12-27 22:36:00 GMT+7] - [MrHecka | 854756142] > /ytmp4
+[20-12-27 22:36:07 GMT+7] - [MrHecka | 854756142] > /ytmp4 https://www.youtube.com/watch?v=pA1sJ_8WNT0&list=LL&index=5
+[20-12-27 22:43:15 GMT+7] - [MrHecka | 854756142] > /ytmp4 https://www.youtube.com/watch?v=OGIV4pBnEIE
+[20-12-27 22:43:38 GMT+7] - [MrHecka | 854756142] > /ytmp4 https://www.youtube.com/watch?v=MofaZRiwiOw
+[20-12-27 23:01:55 GMT+7] - [MrHecka | 854756142] > /ytmp4 https://www.youtube.com/watch?v=OGIV4pBnEIE
+[20-12-27 23:07:04 GMT+7] - [MrHecka | 854756142] > /ytmp4 https://www.youtube.com/watch?v=PqGmQiPQ0Tw
+[20-12-27 23:11:01 GMT+7] - [MrHecka | 854756142] > /ytmp4 https://www.youtube.com/watch?v=PqGmQiPQ0Tw
+[20-12-27 23:12:23 GMT+7] - [MrHecka | 854756142] > /ytmp4 https://www.youtube.com/watch?v=PqGmQiPQ0Tw
+[20-12-27 23:13:11 GMT+7] - [MrHecka | 854756142] > /ytmp4 https://www.youtube.com/watch?v=PqGmQiPQ0Tw
