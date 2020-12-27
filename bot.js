@@ -25,14 +25,14 @@ return await bot.sendMessage(msg.from.id, 'Gunakan /hide untuk menyembunyikan ke
 bot.on('/hide', msg => {
     return bot.sendMessage(
         msg.from.id, 'Gunakan /show untuk menampilkan keyboard!', {replyMarkup: 'hide'}
-    );
-});
+    )
+})
 
 bot.on('/show', msg => {
     return bot.sendMessage(
-        msg.from.id, 'Gunakan /hide untuk menyembunyikan keyboard!', {replyMarkup: 'show'}
-    );
-});
+        msg.from.id, 'Gunakan /hide untuk menyembunyikan keyboard!', {replyMarkup})
+})
+
 
 bot.on(['/menu'], async (msg) => {
     return bot.sendMessage
