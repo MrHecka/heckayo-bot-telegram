@@ -15,7 +15,7 @@ bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
     if(ytdl.validateURL(url)){
       let aac_file = ytdl.getURLVideoID(url) + ".mp4";
       msg.reply.text("Sedang mendownload...sabar ngab...");
-      ytdl(url, {quality: "lowestvideo", filter: "videoonly"})
+      ytdl(url, { quality: "lowestvideo", filter: (format) => format.container === 'mp4' })
         .pipe(fs.createWriteStream(aac_file).on('finish',()=>{
           msg.reply.text("Sedang mengirim...");
           msg.reply.video(aac_file).then(()=>{
