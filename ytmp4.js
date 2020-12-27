@@ -13,9 +13,9 @@ module.exports = bot => {
 bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
     const url = props.match[1];
     if(ytdl.validateURL(url)){
-      let video_file = ytdl.getURLVideoID(url) + ".mp4";
+      let video_file = ytdl.getURLVideoID(url) + '.mp4';
       msg.reply.text("Sedang mendownload...sabar ngab...");
-      ytdl(url, { quality: "lowest", filter: (format) => format.container === 'mp4' })
+      ytdl(url, { quality: "lowestvideo", format: 'mp4' })
         .pipe(fs.createWriteStream(video_file).on('finish',()=>{
           msg.reply.text("Sedang mengirim...");
           msg.reply.video(video_file).then(()=>{
