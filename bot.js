@@ -18,7 +18,8 @@ bot.on(['/start'], async (msg) => {
 await bot.sendPhoto(msg.from.id, './gambar/Welcome.png', { caption: `😎Halo Selamat Datang, ${msg.from.username || msg.from.first_name}! 👋\n____________\nHalo ini adalah BOT Heckayo Versi Telegram😄!\n____________\n
 Gunakan perintah /menu untuk melihat semua fitur yang ada di Bot Heckayo, gunakan juga fitur /about untuk melihat tentang Bot Heckayo, dan gunakan perintah /infomenu untuk melihat informasi dan semua contoh perintah fitur yang ada di Bot Heckayo, terima kasih😉\n____________
 \n🤖VERSI BOT HECKAYO : v2.4🤖\n\nFixed /ytmp3✅\nAdded /igavatar✅\nFixed /twtdl✅\nAdded /tts✅\nAdded /saran✅\nAdded Keyboard✅\nRemake start, menu✅\nAdded /about✅`
-}, {replyMarkup})
+})
+return await bot.sendMessage(msg.from.id, {replyMarkup})
 })
 
 bot.on(['/menu'], async (msg) => {
