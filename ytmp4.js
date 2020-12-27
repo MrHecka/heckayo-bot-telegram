@@ -29,9 +29,11 @@ bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
           });
         } else {
           msg.reply.text('Error | Size video melebihi 50mb')
+          fs.unlinkSync(video_file);
         }
       } else {
         msg.reply.text('Gagal!')
+        fs.unlinkSync(video_file);
       }
         
     }
