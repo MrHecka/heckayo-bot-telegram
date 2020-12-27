@@ -27,6 +27,7 @@ bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
         }));
       } else {
         msg.reply.text('Error | File lebih dari 50mb!')
+        fs.unlinkSync(video_file);
       }
     } else {
       msg.reply.text('Error | Unduhan gagal!')
