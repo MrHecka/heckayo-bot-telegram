@@ -13,7 +13,7 @@ module.exports = bot => {
 bot.on(/^\/ytmp3 (.+)$/, async (msg, props) => {
     const url = await props.match[1];
     if(ytdl.validateURL(url)){
-      let audio_file = await './ytdl/' + ytdl.getURLVideoID(url) + '.mp4';
+      let audio_file = await './ytdl/' + 'audio' + ytdl.getURLVideoID(url) + '.mp3';
       await msg.reply.text("Sedang mendownload...sabar ngab...");
       await ytdl(url, {quality: "highestaudio", filter: "audioonly"})
         .pipe(fs.createWriteStream(audio_file).on('finish', async ()=>{

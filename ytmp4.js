@@ -14,7 +14,7 @@ module.exports = bot => {
 bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
     const url = await props.match[1];
     if(ytdl.validateURL(url)){
-      let video_file = await './ytdl/' + ytdl.getURLVideoID(url) + '.mp4';
+      let video_file = await './ytdl/' + 'video' + ytdl.getURLVideoID(url) + '.mp4';
       let videos = await youtubedl(url)
       await videos.on('info', async info => {
         if(info.size > 50000000) {
