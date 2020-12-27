@@ -13,10 +13,9 @@ module.exports = bot => {
 bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
     const url = props.match[1];
     if(ytdl.validateURL(url)){
-      let aac_file = ytdl(url)
-      .pipe(fs.createWriteStream(`ytdl${msg.from.id}.mp4`));
+      let aac_file = ytdl.getURLVideoID(url) + ".mp4";
       msg.reply.text("Sedang mendownload...sabar ngab...");
-      ytdl(url, {quality: "lowestvideo", filter: format => format.container === 'mp4'})
+      ytdl(url, {quality: "lowestvideo", filter: "videoonly"})
         .pipe(fs.createWriteStream(aac_file).on('finish',()=>{
           msg.reply.text("Sedang mengirim...");
           msg.reply.video(aac_file).then(()=>{
@@ -25,7 +24,7 @@ bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
           });
         }));
     }else{
-      msg.reply.text("Video tidak ditemukan...");
+      msg.reply.text("Error | Video tidak ditemukan...");
     }
   })
 }

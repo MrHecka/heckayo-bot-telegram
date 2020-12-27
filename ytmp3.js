@@ -24,7 +24,7 @@ bot.on(/^\/ytmp3 (.+)$/, async (msg, props) => {
           });
         }));
     }else{
-      msg.reply.text("Video tidak ditemukan...");
+      msg.reply.text("Error | Video tidak ditemukan...");
     }
   })
 }
