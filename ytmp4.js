@@ -27,7 +27,11 @@ bot.on(/^\/ytmp4 (.+)$/, async (msg, props) => {
             msg.reply.text("Berhasil😎👌")   
         
           });
+        } else {
+          msg.reply.text('Error | Size video melebihi 50mb')
         }
+      } else {
+        msg.reply.text('Gagal!')
       }
         
     }
