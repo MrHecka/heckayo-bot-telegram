@@ -23,7 +23,7 @@ const options = {
  
 // TANGGAL
 
-let idgrup = '-1001256421808'
+let idgrup = 'ID GRUP NYA BUAT NGUMPULIN SARAN USER!'
 
 module.exports = bot => {
     bot.on(/^\/saran ([\s\S]+)/, async (msg, args) => {
