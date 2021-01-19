@@ -28,7 +28,7 @@
 Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file directory yang tepat.
 
 ```bash
-> npm i
+> npm install
 ```
 
 ### Cara Menggunakan:
