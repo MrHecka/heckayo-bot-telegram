@@ -12,7 +12,6 @@ module.exports = bot => {
         let arg = args.match[1]
         bot.sendMessage(msg.from.id, 'Sedang merangkum....')
 
-        const result = summarizer(arg)
         summarizer(arg, { sentences: 5 }).then(async result => await bot.sendMessage(msg.from.id, `===[Hasil Rangkuman]===\n\n${result}`))
         .catch((err) => {
             return bot.sendMessage(msg.from.id, `ERROR | ${err}`)

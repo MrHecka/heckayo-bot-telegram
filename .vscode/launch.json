@@ -12,7 +12,8 @@
                 "<node_internals>/**"
             ],
             "env": {"TOKEN":"1432682318:AAFtzU7mQiVaTdbbFHJw1sO4OlxnkkRpnUU","PORT":"8080","apibrainly":"oakOZfqtpI4MW58pyeeeFrFKK","geniusapi":"ZD_lLHBwRlRRfQvVLAnHKHksDHQv9W1wm1ZAByPaYo1o2NuAw6v9USBUI1vEssjq","apitech":"MWbl2W-sGA5Wm-uFVJ23-i2KutD-BvNtE3","apikeytmdb":"2c313e34a9a1811b2f55345ebee1db82","sesiidig":"1771771398%3A77CmMUU4c6fsqF%3A26"},
-            "program": "${file}"
-        }
+            "program": "${file}",
+        },
+        
     ]
 }
