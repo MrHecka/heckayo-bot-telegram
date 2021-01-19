@@ -1,0 +1,5 @@
+<h1> HECKAYO DISCORD BOT - CREATED BY MRHECKA ^_^</h1>
+
+<b>(PRIVATE BOT)</b>
+
+<b><i>DISCORD : MrBear#9374</i></b>
