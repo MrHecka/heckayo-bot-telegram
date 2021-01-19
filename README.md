@@ -83,7 +83,7 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 ### Donate:
 * [`Saweria`](https://saweria.co/Heckayo)
 
-### Sosial Media
+### Sosial Media:
 <a href="https://www.instagram.com/anone14_"><b>Instagram</b></a>
 <p></p>
 <a href="https://www.facebook.com/MrHecka"><b>Facebook</b></a>
@@ -93,4 +93,3 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 <a href="https://telegram.me/MrHecka"><b>Telegram</b></a>
 <p></p>
 <img title="NODE JS" width="512" height="312" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1920px-Node.js_logo.svg.png">
-
