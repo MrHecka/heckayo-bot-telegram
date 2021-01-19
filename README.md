@@ -2,4 +2,4 @@
 
 <b>(PRIVATE BOT)</b>
 
-<b><i>TELEGRAM : telegram.me/MrHecka</i></b>
+<b><i>TELEGRAM : https://telegram.me/MrHecka</i></b>
