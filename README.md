@@ -11,14 +11,18 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/mhankbarbar/followers"><img title="Followers" src="https://img.shields.io/github/followers/MrHecka?color=lightblue&style=flat-square"></a>
-<a href="https://github.com/mhankbarbar/whatsapp-bot/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/MrHecka/whatsapp-bot?color=red&style=flat-square"></a>
-<a href="https://github.com/mhankbarbar/whatsapp-bot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/MrHecka/whatsapp-bot?color=red&style=flat-square"></a>
-<a href="https://github.com/mhankbarbar/whatsapp-bot/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/MrHecka/whatsapp-bot?label=Watchers&color=blue&style=flat-square"></a>
-<a href="#"><img title="UNMAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-blue.svg"</a>
-
-<b>(PRIVATE BOT)</b>
-
-<b align="center"><i>TELEGRAM : https://telegram.me/MrHecka</i></b>
-
+<img title="Followers" src="https://img.shields.io/github/followers/MrHecka?color=lightblue&style=flat-square">
+<img title="Stars" src="https://img.shields.io/github/stars/MrHecka/whatsapp-bot?color=red&style=flat-square">
+<img title="Forks" src="https://img.shields.io/github/forks/MrHecka/whatsapp-bot?color=red&style=flat-square">
+<img title="Watching" src="https://img.shields.io/github/watchers/MrHecka/whatsapp-bot?label=Watchers&color=blue&style=flat-square">
+<img title="UNMAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-blue.svg"
 </p>
+ 
+<p align="center">
+<b>(PRIVATE BOT)</b>
+</p>
+
+<p align="center">
+<a href="https://telegram.me/MrHecka">MY TELEGRAM</b></a>
+</p>
+
