@@ -19,13 +19,27 @@
 </p>
 
 
+## Clone Projek Ini:
+
 ```bash
-> PRIVATE BOT
+> git clone https://github.com/MrHecka/heckayo-bot-telegram
 ```
 
+## Install Dependencies Terlebih Dahulu:
+Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file directory yang tepat.
+
+```bash
+> npm i
+```
+
+### Cara Menggunakan
+```bash
+> Pastikan Kamu Sudah Mempunyai TOKEN Bot, Jika Belum Punya Ambil Di Bot Father Terlebih Dahulu!
+> Jika Sudah Jalankan Bot -> node bot.js
+```
 
 <p align="center">
-<a href="https://telegram.me/MrHecka"><b>> MY TELEGRAM</b></a>
+<a href="https://telegram.me/MrHecka"><b>> MY TELEGRAM <</b></a>
 </p>
 
 <p align="center">
