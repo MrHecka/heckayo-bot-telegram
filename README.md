@@ -22,9 +22,11 @@
 <b>(PRIVATE BOT)</b>
 </p>
 
+```bash
 <p align="center">
-<a href="https://telegram.me/MrHecka"><b>MY TELEGRAM</b></a>
+<a href="https://telegram.me/MrHecka"><b>> MY TELEGRAM</b></a>
 </p>
+```
 
 <p align="center">
 <img title="Javascript" width="512" height="312" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1920px-Node.js_logo.svg.png">
