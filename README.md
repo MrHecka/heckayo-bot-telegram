@@ -84,6 +84,7 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 
 ### Donate:
 * [`Saweria`](https://saweria.co/Heckayo)
+* [`Paypal`](https://paypal.me/mrplo/)
 
 ### Sosial Media:
 * [`Instagram`](https://www.instagram.com/anone14_)
