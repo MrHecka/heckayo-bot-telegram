@@ -3,7 +3,7 @@ console.log('logs.js AKTIF!')
 const TeleBot = require('telebot')
 const delay = require('delay')
 let fs = require('fs')
-let dev = '854756142'
+let dev = 'ID KAMU/OWNER BOT'
 
 const bot = new TeleBot({
     token: process.env.TOKEN
