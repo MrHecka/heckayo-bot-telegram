@@ -18,11 +18,10 @@
 <img title="UNMAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-blue.svg"
 </p>
 
-<p align="center">
-<b>
+
 ```bash
 > PRIVATE BOT
-```
+
 </b>
 </p>
 
