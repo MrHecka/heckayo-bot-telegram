@@ -27,5 +27,5 @@
 </p>
 
 <p align="center">
-<img title="Javascript" width="256" height="512" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1920px-Node.js_logo.svg.png">
+<img title="Javascript" width="512" height="256" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1920px-Node.js_logo.svg.png">
  </p>
