@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/mhankbarbar/followers"><img title="Followers" src="https://img.shields.io/github/followers/MrHecka?color=lightblue&style=flat-square"></a>
+<a href="https://github.com/mhankbarbar/followers"><img title="Followers" src="https://img.shields.io/github/Pengikut/MrHecka?color=lightblue&style=flat-square"></a>
 
 <p align="center">
 <b>(PRIVATE BOT)</b>
