@@ -2,7 +2,6 @@ console.log('bot.js aktif!')
 
 const TeleBot = require('telebot')
 const delay = require('delay')
-const { tebakmulai } = require('./tebak.js')
 
 
 const bot = new TeleBot({
