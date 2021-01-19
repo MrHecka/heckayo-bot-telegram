@@ -21,7 +21,7 @@
 <p align="center">
 <b>
 ```bash
-PRIVATE BOT
+> PRIVATE BOT
 ```
 </b>
 </p>
