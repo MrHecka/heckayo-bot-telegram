@@ -21,9 +21,8 @@
 
 ```bash
 > PRIVATE BOT
+```
 
-</b>
-</p>
 
 <p align="center">
 <a href="https://telegram.me/MrHecka"><b>> MY TELEGRAM</b></a>
