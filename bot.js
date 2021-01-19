@@ -166,7 +166,6 @@ require('./saran.js')(bot)
 require('./monitoring.js')(bot)
 require('./logs.js')(bot)
 require('./sendprivate.js')(bot)
-require('./tebak.js')(bot)
 
 // require disini!
 
