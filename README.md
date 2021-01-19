@@ -15,7 +15,7 @@
 <img title="Stars" src="https://img.shields.io/github/stars/MrHecka/whatsapp-bot?color=magenta&style=flat-square">
 <img title="Forks" src="https://img.shields.io/github/forks/MrHecka/whatsapp-bot?color=brickred&style=flat-square">
 <img title="Watching" src="https://img.shields.io/github/watchers/MrHecka/whatsapp-bot?label=Watchers&color=red&style=flat-square">
-<img title="UNMAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-blue.svg"
+<img title="UNMAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-yellow.svg"
 </p>
 
 
