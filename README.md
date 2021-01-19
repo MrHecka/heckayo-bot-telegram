@@ -55,6 +55,7 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 |       ✅       | Terjemahan   |
 |       ✅       | Rangkum   |
 |       ✅       | Film Trending   |
+|       ✅       | Minigame Slots   |
 |       ✅       | Kirim Pesan Private   |
 |      Dan        |   Lainnya...                     |
 
