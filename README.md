@@ -42,6 +42,7 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 | Menu |                Fitur           |
 | :-----------: | :--------------------------------: |
 |       ✅       | Nulis          |
+|       ✅       | Brainly          |
 |       ✅       | Cek Resi                    |
 |       ✅       | Penyegar Mata                        |
 |       ✅       | Pasangan   |
