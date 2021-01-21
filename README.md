@@ -94,6 +94,6 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 * [`Twitter`](https://twitter.com/heckabinary)
 * [`Telegram`](https://telegram.me/MrHecka)
 
-<img title="NODE JS" width="128" height="256" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1920px-Node.js_logo.svg.png">
+<img title="NODE JS" width="256" height="128" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1920px-Node.js_logo.svg.png">
 
 
