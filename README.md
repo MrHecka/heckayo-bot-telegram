@@ -29,6 +29,7 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 
 ```bash
 > npm install
+> Install Buildpacks Ini Jika Kamu Menjalankan Bot Di Heroku (https://github.com/DuckyTeam/heroku-buildpack-imagemagick)
 ```
 
 ### Cara Menggunakan:
@@ -81,6 +82,7 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 
 ## Special Thanks To:
 * [`telebot`](https://github.com/mullwar/telebot)
+* [`Image Magick`](https://github.com/DuckyTeam/heroku-buildpack-imagemagick)
 
 ### Donate:
 * [`Saweria`](https://saweria.co/Heckayo)
@@ -92,6 +94,6 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 * [`Twitter`](https://twitter.com/heckabinary)
 * [`Telegram`](https://telegram.me/MrHecka)
 
-<img title="NODE JS" width="512" height="312" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1920px-Node.js_logo.svg.png">
+<img title="NODE JS" width="256" height="256" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1920px-Node.js_logo.svg.png">
 
 
