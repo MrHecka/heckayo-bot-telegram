@@ -29,13 +29,13 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 
 ```bash
 > npm install
-> Install Buildpacks Ini Jika Kamu Menjalankan Bot Di Heroku (https://github.com/DuckyTeam/heroku-buildpack-imagemagick)
 ```
 
 ### Cara Menggunakan:
 ```bash
 > Pastikan Kamu Sudah Mempunyai TOKEN Bot, Jika Belum Punya Ambil Di Bot Father Terlebih Dahulu!
 > Jika Sudah Jalankan Bot -> node bot.js
+> Install Buildpacks Ini Jika Kamu Menjalankan Bot Di Heroku (https://github.com/DuckyTeam/heroku-buildpack-imagemagick)
 ```
 
 ## Fitur:
@@ -94,6 +94,6 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 * [`Twitter`](https://twitter.com/heckabinary)
 * [`Telegram`](https://telegram.me/MrHecka)
 
-<img title="NODE JS" width="256" height="256" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1920px-Node.js_logo.svg.png">
+<img title="NODE JS" width="128" height="128" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1920px-Node.js_logo.svg.png">
 
 
