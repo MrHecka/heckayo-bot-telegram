@@ -33,9 +33,23 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 
 ### Cara Menggunakan:
 ```bash
-> Pastikan Kamu Sudah Mempunyai TOKEN Bot, Jika Belum Punya Ambil Di Bot Father Terlebih Dahulu!
-> Jika Sudah Jalankan Bot -> node bot.js
+> Pastikan Kamu Sudah Mempunyai Atau Menaruh TOKEN Bot Dan API KEY Fitur Lainnya Di Environment (process.env.{nama_env})
+> Jika Belum Punya TOKEN Telebot, Silahkan Ambil Di Bot Father Terlebih Dahulu!
+> Jika Sudah, Jalankan Bot -> node bot.js
 > Install Buildpacks Ini Jika Kamu Menjalankan Bot Di Heroku (https://github.com/DuckyTeam/heroku-buildpack-imagemagick)
+```
+
+### NAMA TOKEN & APIKEY
+```bash
+> TOKEN (Token Untuk Mengaktifkan Telebot, Yang Bisa Didapatkan Melalui Telegram Bot Father => https://telegram.me/BotFather)
+> apibrainly (API Key Untuk Fitur Brainly, Yang Bisa Didapatkan Melalui Link => http://docs.farzain.com/normal/brainly.php)
+> geniusapi (API Key Untuk Fitur Lirik, Yang Bisa Didapatkan Melalui Link => https://docs.genius.com)
+> apikeytmdb (API Key Untuk Fitur Film Trending, Yang Bisa Didapatkan Melalui Link => https://www.themoviedb.org/settings/api)
+> sesiidig (Session Instagram Untuk Fitur Instagram Downloader, Yang Bisa Didapatkan Melalui Cara => https://www.npmjs.com/package/scraper-instagram)
+> apitwt (API Key Untuk Fitur Twitter, Yang Bisa Didapatkan Melalui Link => https://developer.twitter.com/en/portal/dashboard)
+> apisecrettwt (~~~~~~)
+> tokentwt (~~~~~~)
+> secrettokentwt (~~~~~~)
 ```
 
 ## Fitur:
