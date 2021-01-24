@@ -12,9 +12,9 @@
 
 <p align="center">
 <img title="Followers" src="https://img.shields.io/github/followers/MrHecka?label=Followers&color=gold&style=flat-square">
-<img title="Stars" src="https://img.shields.io/github/stars/MrHecka/whatsapp-bot?label=Stars&color=magenta&style=flat-square">
-<img title="Forks" src="https://img.shields.io/github/forks/MrHecka/whatsapp-bot?label=Forks&color=brickred&style=flat-square">
-<img title="Watching" src="https://img.shields.io/github/watchers/MrHecka/whatsapp-bot?label=Watchers&color=red&style=flat-square">
+<img title="Stars" src="https://img.shields.io/github/stars/MrHecka/heckayo-bot-telegram?label=Stars&color=magenta&style=flat-square">
+<img title="Forks" src="https://img.shields.io/github/forks/MrHecka/heckayo-bot-telegram?label=Forks&color=brickred&style=flat-square">
+<img title="Watching" src="https://img.shields.io/github/watchers/MrHecka/heckayo-bot-telegram?label=Watchers&color=red&style=flat-square">
 </p>
 
 
