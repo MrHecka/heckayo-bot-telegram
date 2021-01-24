@@ -39,7 +39,7 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 > Install Buildpacks Ini Jika Kamu Menjalankan Bot Di Heroku (https://github.com/DuckyTeam/heroku-buildpack-imagemagick)
 ```
 
-### NAMA TOKEN & APIKEY
+### Nama Token & API Key
 ```bash
 > TOKEN (Token Untuk Mengaktifkan Telebot, Yang Bisa Didapatkan Melalui Telegram Bot Father => https://telegram.me/BotFather)
 > apibrainly (API Key Untuk Fitur Brainly, Yang Bisa Didapatkan Melalui Link => http://docs.farzain.com/normal/brainly.php)
@@ -50,6 +50,8 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 > apisecrettwt (~~~~~~)
 > tokentwt (~~~~~~)
 > secrettokentwt (~~~~~~)
+
+Catatan : Semua Token Dan Api Key Harap Dimasukkan Ke Environment Sesuai Nama Masing-Masing (process.env.{namanya})
 ```
 
 ## Fitur:
