@@ -1,4 +1,4 @@
-console.log('nulis3.js aktif!')
+console.log('nulis2.js aktif!')
 
 const TeleBot = require('telebot')
 const delay = require('delay')
