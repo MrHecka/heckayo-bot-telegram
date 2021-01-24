@@ -1,4 +1,4 @@
-console.log('nulis4.js aktif!')
+console.log('nulis3.js aktif!')
 
 const { spawn, exec } = require('child_process')
 const fs = require('fs')
