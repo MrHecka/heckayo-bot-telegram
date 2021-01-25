@@ -42,7 +42,7 @@ bot.on(['/menu'], async (msg) => {
 =====[DAFTAR MENU]=====\n> /nulis [teks]\n> /nulis2 [teks]\n> /nulis3 [teks]\n> /anime [nama anime]
 > /animedl [nama anime]\n> /animedl2 [nama anime]\n> /filmtrend\n> /filmdetail [angka 1-20]
 > /cekresi [kurir] [resi]\n> /brainly [pertanyaan]\n> /lirik [nama artis - judul lagu]\n> /saran [teks]
-> /qrcode [teks]\n> /tts [teks]\n> /pasangan [namamu] [pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]
+> /qrcode [teks]\n> /hartatahta [teks]\n> /tts [teks]\n> /pasangan [namamu] [pasanganmu]\n> /translate [teks]\n> /terjemahan [teks]
 > /rangkum [teks]\n> /megumin\n> /neko\n> /waifu\n> /cewecans\n> /wallpaper\n> /slots\n========================
 \n===[Sosmed Downloader]===\n> /ytmp4 [link yt]\n> /ytmp3 [link yt]\n> /twtdl [link twitter]\n> /tiktokdl [link tiktok]
 > /fbdl [link video facebook]\n> /igdl [link instagram]\n> /igtv [link instagram tv]\n> /igstory [angka] [username ig]
@@ -62,6 +62,7 @@ return bot.sendMessage
 /anime = Untuk mencari info seputar anime, jumlah episode, sinopsis, rating, dan lainnya \n(Contoh Perintah : /anime death note)\n
 /cekresi = Untuk mengecek resi atau tracking paket lewat kurir dan resi yang di tulis \n(Contoh Perintah : /cekresi jne 4105xxxxxxxx320)\n
 /brainly = Untuk mencari jawaban dari brainly \n(Contoh Perintah : /brainly kenapa bumi bulat)\n
+/hartatahta = Untuk membuat teks harta tahta \n(Contoh Perintah : /hartatahta MFarelS:v)\n
 /tts = Untuk merubah teks menjadi audio, suara by mbak mbak gugel :v \n(Contoh Perintah : /tts anjay mabar)\n
 /lirik = Untuk mencari lirik musik \n(Contoh Perintah : /lirik vierra seandainya)\n
 /megumin = Untuk mencari gambar megumin secara random atau acak \n(Contoh Perintah : /megumin)\n
