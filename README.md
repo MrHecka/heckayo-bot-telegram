@@ -43,7 +43,7 @@ Sebelum anda menjalankan perintah ini, pastikan anda sudah berada di file direct
 ```bash
 > TOKEN (Token Untuk Mengaktifkan Telebot, Yang Bisa Didapatkan Melalui Telegram Bot Father => https://telegram.me/BotFather)
 > apibrainly (API Key Untuk Fitur Brainly, Yang Bisa Didapatkan Melalui Link => http://docs.farzain.com/normal/brainly.php)
-> geniusapi (API Key Untuk Fitur Lirik, Yang Bisa Didapatkan Melalui Link => https://docs.genius.com)
+> geniusapi (API Key Untuk Fitur Lirik, Yang Bisa Didapatkan Melalui Link => https://genius.com/api-clients
 > apikeytmdb (API Key Untuk Fitur Film Trending, Yang Bisa Didapatkan Melalui Link => https://www.themoviedb.org/settings/api)
 > sesiidig (Session Instagram Untuk Fitur Instagram Downloader, Yang Bisa Didapatkan Melalui Cara => https://www.npmjs.com/package/scraper-instagram)
 > apitwt (API Key Untuk Fitur Twitter, Yang Bisa Didapatkan Melalui Link => https://developer.twitter.com/en/portal/dashboard)
