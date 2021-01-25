@@ -132,6 +132,7 @@ return bot.sendMessage
 require('./nulis.js')(bot)
 require('./nulis2.js')(bot)
 require('./nulis3.js')(bot)
+require('./hartatahta.js')(bot) 
 require('./megumin.js')(bot)
 require('./neko.js')(bot)
 require('./waifu.js')(bot)
