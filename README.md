@@ -58,7 +58,8 @@ Catatan : Semua Token Dan Api Key Harap Dimasukkan Ke Environment Sesuai Nama Ma
 
 | Menu |                Fitur           |
 | :-----------: | :--------------------------------: |
-|       ✅       | Nulis          |
+|       ✅       | Nulis          | 
+|       ✅       | Harta Tahta   |
 |       ✅       | Brainly          |
 |       ✅       | Cek Resi                    |
 |       ✅       | Penyegar Mata                        |
